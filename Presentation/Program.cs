@@ -16,13 +16,13 @@ builder.Services.ConfigureLoggerService();
 builder.Services.ConfigurePostGressContext(builder.Configuration);
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureServiceManager();
+builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureJwt(builder.Configuration);
 builder.Services.AddJwtConfiguration(builder.Configuration);
 builder.Services.AddApplicationServices();
 builder.Services.ConfigureSwagger(); 
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(RegisterUserHandler).Assembly));
-
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {

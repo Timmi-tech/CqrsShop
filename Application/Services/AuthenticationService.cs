@@ -15,11 +15,10 @@ namespace Application.Services
 {
     internal sealed class AuthenticationService : IAuthenticationService
     {
-        private readonly ILoggerManager? _logger;
+        private readonly ILoggerManager _logger;
         private readonly UserManager<User> _userManager;
         private readonly IOptions<JwtConfiguration> _configuration;
         private readonly JwtConfiguration _jwtConfiguration;
-        private User? _user;
 
         public AuthenticationService(ILoggerManager logger, UserManager<User> userManager, IOptions<JwtConfiguration> configuration)
         {
@@ -27,6 +26,7 @@ namespace Application.Services
             _userManager = userManager;
             _configuration = configuration;
             _jwtConfiguration = _configuration.Value;
+            
         }
         public async Task<IdentityResult> RegisterUser(UserForRegistrationDto
         userForRegistration)
@@ -42,38 +42,38 @@ namespace Application.Services
             var result = await _userManager.CreateAsync(user, userForRegistration.Password);
             return result;
         }
-        public async Task<bool> ValidateUser(UserForAuthenticationDto userForAuth)
+        public async Task<User> ValidateUser(UserForAuthenticationDto userForAuth)
         {
-            _user = await _userManager.FindByEmailAsync(userForAuth.Email!);
-            if (_user == null)
+            var user = await _userManager.FindByEmailAsync(userForAuth.Email!);
+            if (user == null)
             {
-                _logger?.LogWarn($"Authentication failed. No user found with email: {userForAuth.Email}");
-                return false;
+                _logger.LogWarn($"Authentication failed. No user found with email: {userForAuth.Email}");
+                return null!;
             }
-            if (!await _userManager.CheckPasswordAsync(_user, userForAuth.Password!))
+            if (!await _userManager.CheckPasswordAsync(user, userForAuth.Password!))
             {
-                _logger?.LogWarn($"Authentication failed. Invalid password for user: {userForAuth.Email}");
-                return false;
+                _logger.LogWarn($"Authentication failed. Invalid password for user: {userForAuth.Email}");
+                return null!;
             }
-            return true;
+            return user;
         }
-        public async Task<TokenDto> CreateToken(bool populateExp)
+        public async Task<TokenDto> CreateToken(User user,bool populateExp)
         {
             var signingCredentials = GetSigningCredentials();
-            var claims = await GetClaims();
+            var claims = await GetClaims(user);
             var tokenOptions = GenerateTokenOptions(signingCredentials, claims);
 
 
             var refreshToken = GenerateRefreshToken();
 
-            _user.RefreshToken = HashRefreshToken(refreshToken);
+            user.RefreshToken = HashRefreshToken(refreshToken);
 
             if (populateExp)
             {
-                _user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+                user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             }
 
-            await _userManager.UpdateAsync(_user);
+            await _userManager.UpdateAsync(user);
 
             var accessToken = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
 
@@ -85,13 +85,13 @@ namespace Application.Services
             var secret = new SymmetricSecurityKey(key);
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
         }
-        private  Task<List<Claim>> GetClaims()
+        private Task<List<Claim>> GetClaims(User user)
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, _user.Id),
-                new Claim(ClaimTypes.Name, _user.UserName),
-                new Claim(ClaimTypes.Role, _user.Role.ToString()) // Add this line
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.Name, user.UserName!),
+                new Claim(ClaimTypes.Role, user.Role.ToString()) // Add this line
             };
             return Task.FromResult(claims);
         }
@@ -167,17 +167,16 @@ namespace Application.Services
             var refreshTokenHash = HashRefreshToken(tokenDto.RefreshToken);
             if (user.RefreshToken != refreshTokenHash)
             {
-                _logger?.LogWarn($"Invalid refresh token attempt for user: {username}");
+                _logger.LogWarn($"Invalid refresh token attempt for user: {username}");
                 throw new SecurityTokenException("Invalid refresh token");
             }
             if (user.RefreshTokenExpiryTime <= DateTime.UtcNow)
             {
-                _logger?.LogWarn($"Expired refresh token attempt for user: {username}");
+                _logger.LogWarn($"Expired refresh token attempt for user: {username}");
                 throw new SecurityTokenException("Refresh token expired");
             }
 
-            _user = user;
-            return await CreateToken(populateExp: true);
+            return await CreateToken(user, populateExp: true);
         }
     }
 }

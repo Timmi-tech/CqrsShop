@@ -1,6 +1,7 @@
 using System.Reflection;
 using System.Text;
 using Application.Interfaces;
+using Application.Interfaces.Contracts;
 using Application.Interfaces.Services.Contracts;
 using Application.Services;
 using Domain.Entities.ConfigurationsModels;
@@ -105,12 +106,15 @@ namespace Infrastructure.Extensions
 
             return services;
         }
-         public static void ConfigureSwagger(this IServiceCollection services) 
-            { 
-                services.AddSwaggerGen(s => { 
-                    s.SwaggerDoc("v1", new OpenApiInfo { Title = "CqrsShop", Version = "v1" });
-                    }); 
-                    }
+        public static void ConfigureSwagger(this IServiceCollection services)
+        {
+            services.AddSwaggerGen(s =>
+            {
+                s.SwaggerDoc("v1", new OpenApiInfo { Title = "CqrsShop", Version = "v1" });
+            });
+        }
+        // This method registers the IRepositoryManager service with the dependency injection container.
+        public static void ConfigureRepositoryManager(this IServiceCollection services) => services.AddScoped<IRepositoryManager, RepositoryManager>();
     }
 
 }

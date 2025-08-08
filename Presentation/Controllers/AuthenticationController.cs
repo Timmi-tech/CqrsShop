@@ -8,7 +8,7 @@ using Application.Features.Authentication.Commands.LoginUser;
 namespace Presentation.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/Authentication")]
     public class AuthenticationController : ControllerBase
     {
         private readonly IMediator _mediator;

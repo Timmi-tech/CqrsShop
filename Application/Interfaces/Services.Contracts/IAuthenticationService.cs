@@ -1,4 +1,5 @@
 using Application.DTOs;
+using Domain.Entities.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace Application.Interfaces.Services.Contracts
@@ -6,8 +7,8 @@ namespace Application.Interfaces.Services.Contracts
     public interface IAuthenticationService
     {
         Task<IdentityResult> RegisterUser(UserForRegistrationDto userForRegistration);
-        Task<bool> ValidateUser(UserForAuthenticationDto userForAuth);
-        Task<TokenDto> CreateToken(bool populateExp);
+        Task<User> ValidateUser(UserForAuthenticationDto userForAuth);
+        Task<TokenDto> CreateToken(User user,bool populateExp);
         Task<TokenDto> RefreshToken(TokenDto tokenDto);
     }
 }

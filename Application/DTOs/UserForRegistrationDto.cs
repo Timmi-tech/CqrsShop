@@ -19,8 +19,8 @@ namespace Application.DTOs
     // This DTO is used for user authentication
     public record UserForAuthenticationDto
     {
-        public string? Email { get; init; }
-        public string? Password { get; init; }
+        public string Email { get; init; } = string.Empty;
+        public string Password { get; init; } = string.Empty;
 
     }
 

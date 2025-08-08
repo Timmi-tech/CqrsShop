@@ -18,10 +18,10 @@ namespace Application.Features.Authentication.Handlers
         public async Task<TokenDto> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
             var isValidUser = await _serviceManager.AuthenticationService.ValidateUser(request.UserForAuthentication);
-            if (!isValidUser)
+            if (isValidUser == null)
                 throw new UnauthorizedAccessException("Invalid credentials.");
 
-            return await _serviceManager.AuthenticationService.CreateToken(populateExp: true);
+            return await _serviceManager.AuthenticationService.CreateToken(isValidUser, populateExp: true);
         }
     }
 }
