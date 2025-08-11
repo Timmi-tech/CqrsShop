@@ -4,6 +4,7 @@ namespace Application.Interfaces.Contracts
     {
         IUserProfileRepository User { get; }
         IProductRepository Product { get; }
+        IOrderRepository Order { get; }
         Task SaveAsync();
     }
 }

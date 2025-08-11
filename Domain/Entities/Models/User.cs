@@ -11,7 +11,8 @@ namespace Domain.Entities.Models
         public UserRole Role { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
-        
+
         public ICollection<Product> Products { get; set; } = new List<Product>();
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

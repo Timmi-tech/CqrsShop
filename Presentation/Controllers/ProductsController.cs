@@ -28,8 +28,8 @@ namespace Presentation.Controllers
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetProductById(Guid id)
         {
-            var product = await _mediator.Send(new GetProductsByIdQuery(id));
-            return Ok(product);
+            var products = await _mediator.Send(new GetProductsByIdQuery(new List<Guid> { id }));
+            return Ok(products);
         }
         // GET: api/products
         [HttpGet]

@@ -1,3 +1,4 @@
+using System.Data;
 using FluentValidation;
 
 namespace Application.Features.Products.Queries
@@ -6,7 +7,7 @@ namespace Application.Features.Products.Queries
     {
         public GetProductsByIdValidator()
         {
-            RuleFor(x => x.Id).NotEmpty();
+            RuleFor(x => x.ProductIds).NotEmpty().WithMessage("Id is required");
         }
     }
 }
