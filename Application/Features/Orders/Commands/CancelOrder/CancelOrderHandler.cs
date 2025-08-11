@@ -18,20 +18,19 @@ namespace Application.Features.Orders.Commands.CancelOrder
 
             order.CancelOrder();
 
-            var productsIds = order.OrderItems.Select(oi => oi.ProductId).ToList();
-            var products = await _repositoryManager.Product.GetProductsByIdsAsync(productsIds, trackChanges: true);
+            // var productsIds = order.OrderItems.Select(oi => oi.ProductId).ToList();
+            // var products = await _repositoryManager.Product.GetProductsByIdsAsync(productsIds, trackChanges: true);
 
             foreach (var item in order.OrderItems)
             {
-                var product = products.First(p => p.Id == item.ProductId);
-                product.AdjustStock(item.Quantity);
+                // var product = products.First(p => p.Id == item.ProductId);
+                // product.AdjustStock(item.Quantity);
+
+                item.Product.AdjustStock(item.Quantity);
             }
             await _repositoryManager.SaveAsync();
 
             return Unit.Value;
-
-            
-
         }
     }
 }

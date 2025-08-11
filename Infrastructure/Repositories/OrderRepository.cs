@@ -17,7 +17,14 @@ namespace Infrastructure.Repositories
         .ToListAsync();
 
         // Get order by id
-        public async Task<Order?> GetOrderByIdAsync(Guid id, bool trackChanges) => await FindByCondition(x => x.Id.Equals(id), trackChanges).FirstOrDefaultAsync();
+        public async Task<Order?> GetOrderByIdAsync(Guid id, bool trackChanges)
+        {
+            var query = FindByCondition(x => x.Id.Equals(id), trackChanges)
+            .Include(o => o.OrderItems)
+            .ThenInclude(oi => oi.Product);
+
+            return await query.FirstOrDefaultAsync();
+        }
 
         // Create Order
         public void CreateOrder(Order order) => Create(order);
