@@ -1,0 +1,42 @@
+2025-08-10 23:48:42.715 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-10 23:48:42.980 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-10 23:48:42.986 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-10 23:48:42.991 +01:00 [INF] Hosting environment: Development
+2025-08-10 23:48:42.996 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\presentation
+2025-08-10 23:49:13.121 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.html - null null
+2025-08-10 23:49:13.136 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-10 23:49:13.238 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.html - 200 null text/html;charset=utf-8 117.5873ms
+2025-08-10 23:49:13.728 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - null null
+2025-08-10 23:49:13.899 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 170.9354ms
+2025-08-10 23:49:54.242 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Products - application/json 167
+2025-08-10 23:49:54.340 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-10 23:49:54.372 +01:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Application.Features.Products.Commands.CreateProduct.CreateProductCommand) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-10 23:49:56.704 +01:00 [INF] Executed DbCommand (87ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?', @p5='?' (DbType = Decimal), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime), @p8='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Product" ("Id", "Category", "CreatedAt", "Description", "Name", "Price", "StockQuantity", "UpdatedAt", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2025-08-10 23:49:56.758 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2025-08-10 23:49:56.786 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.CreateProduct (Presentation) in 2397.6467ms
+2025-08-10 23:49:56.795 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-10 23:49:56.809 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Products - 201 null application/json; charset=utf-8 2566.9886ms
+2025-08-10 23:50:17.734 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-10 23:50:17.753 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-10 23:50:17.764 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-10 23:50:18.031 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."StockQuantity", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+2025-08-10 23:50:18.060 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-10 23:50:18.079 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 307.4603ms
+2025-08-10 23:50:18.085 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-10 23:50:18.090 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 355.4825ms
+2025-08-10 23:50:30.414 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products/e0b1ec89-5842-423a-930a-48f270132058 - null null
+2025-08-10 23:50:30.428 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-10 23:50:30.437 +01:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(System.Guid) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-10 23:50:30.582 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."StockQuantity", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+WHERE p."Id" = @__productId_0
+LIMIT 1
+2025-08-10 23:50:30.589 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.ProductDto'.
+2025-08-10 23:50:30.593 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetProductById (Presentation) in 144.2385ms
+2025-08-10 23:50:30.598 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-10 23:50:30.603 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products/e0b1ec89-5842-423a-930a-48f270132058 - 200 null application/json; charset=utf-8 189.6814ms

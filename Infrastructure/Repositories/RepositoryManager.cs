@@ -6,14 +6,17 @@ namespace Infrastructure.Repositories
     {
         private readonly RepositoryWriteDbContext _repositoryWriteDbContext;
         private readonly Lazy<IUserProfileRepository> _userProfileRepository;
+        private readonly Lazy<IProductRepository> _productRepository;
 
 
         public RepositoryManager(RepositoryWriteDbContext repositoryWriteDbContext)
         {
             _repositoryWriteDbContext = repositoryWriteDbContext;
             _userProfileRepository = new Lazy<IUserProfileRepository>(() => new UserProfileRepository(repositoryWriteDbContext));
+            _productRepository = new Lazy<IProductRepository>(() => new ProductRepository(repositoryWriteDbContext));
         }
         public IUserProfileRepository User => _userProfileRepository.Value;
+        public IProductRepository Product => _productRepository.Value;
 
         public async Task SaveAsync()
         {
