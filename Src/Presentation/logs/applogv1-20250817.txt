@@ -1,0 +1,8 @@
+2025-08-17 21:50:21.074 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-17 21:50:21.285 +01:00 [INF] Creating key {8d89a941-1792-4b49-af89-3f7883a80460} with creation date 2025-08-17 20:50:21Z, activation date 2025-08-17 20:50:21Z, and expiration date 2025-11-15 20:50:21Z.
+2025-08-17 21:50:21.307 +01:00 [INF] Writing data to file 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys\key-8d89a941-1792-4b49-af89-3f7883a80460.xml'.
+2025-08-17 21:50:21.464 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-17 21:50:21.472 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-17 21:50:21.478 +01:00 [INF] Hosting environment: Development
+2025-08-17 21:50:21.484 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-17 21:50:28.168 +01:00 [INF] Application is shutting down...

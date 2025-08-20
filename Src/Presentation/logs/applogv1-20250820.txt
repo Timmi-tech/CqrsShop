@@ -1,0 +1,282 @@
+2025-08-20 07:38:49.756 +01:00 [INF] Application is shutting down...
+2025-08-20 09:55:20.113 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-20 09:55:20.510 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-20 09:55:20.517 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 09:55:20.520 +01:00 [INF] Hosting environment: Development
+2025-08-20 09:55:20.524 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-20 09:55:54.699 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order - null null
+2025-08-20 09:55:54.710 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-20 09:55:54.848 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-20 09:55:54.880 +01:00 [INF] Route matched with {action = "GetAllOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders() on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-20 09:55:58.027 +01:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."Category", t."CreatedAt0", t."Description", t."Name", t."Price0", t."UpdatedAt0", t."UserId"
+FROM "Order" AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+ORDER BY o."Id", t."Id"
+2025-08-20 09:55:58.162 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.OrderDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 09:55:58.214 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetAllOrders (Presentation) in 3321.307ms
+2025-08-20 09:55:58.223 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-20 09:55:58.239 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order - 200 null application/json; charset=utf-8 3541.2326ms
+2025-08-20 09:56:07.320 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-20 09:56:07.342 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 09:56:07.353 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 09:56:07.568 +01:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-20 09:56:07.577 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 09:56:07.584 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 221.8699ms
+2025-08-20 09:56:07.590 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 09:56:07.594 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 274.0077ms
+2025-08-20 09:56:17.495 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 82
+2025-08-20 09:56:17.516 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 09:56:17.537 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-20 09:56:17.630 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-20 09:56:17.796 +01:00 [INF] Executed DbCommand (16ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-20 09:56:17.812 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-20 09:56:17.817 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 272.3402ms
+2025-08-20 09:56:17.821 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 09:56:17.824 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 329.2011ms
+2025-08-20 09:56:21.921 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-20 09:56:21.929 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 09:56:21.933 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 09:56:21.947 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-20 09:56:21.956 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 09:56:21.960 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 19.2591ms
+2025-08-20 09:56:21.965 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 09:56:21.969 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 48.4675ms
+2025-08-20 09:56:29.303 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 83
+2025-08-20 09:56:29.313 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 09:56:29.318 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-20 09:56:29.335 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-20 09:56:29.355 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-20 09:56:29.365 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-20 09:56:29.369 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 42.7245ms
+2025-08-20 09:56:29.373 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 09:56:29.380 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 74.2073ms
+2025-08-20 09:56:35.927 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-20 09:56:35.935 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 09:56:35.942 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 09:56:35.956 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-20 09:56:35.966 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 09:56:35.974 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 25.469ms
+2025-08-20 09:56:35.978 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 09:56:35.981 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 54.4093ms
+2025-08-20 09:56:46.507 +01:00 [INF] Application is shutting down...
+2025-08-20 11:04:34.479 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-20 11:04:34.914 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-20 11:04:34.921 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 11:04:34.924 +01:00 [INF] Hosting environment: Development
+2025-08-20 11:04:34.928 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-20 11:05:51.388 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Products - application/json 165
+2025-08-20 11:05:51.409 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-20 11:05:51.635 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-20 11:05:51.667 +01:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Application.Features.Products.Commands.CreateProduct.CreateProductCommand) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 11:05:56.162 +01:00 [INF] Executed DbCommand (99ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?', @p5='?' (DbType = Decimal), @p6='?' (DbType = DateTime), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p10='?' (DbType = Guid), @p11='?' (DbType = Int32), @p12='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Product" ("Id", "Category", "CreatedAt", "Description", "Name", "Price", "UpdatedAt", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+INSERT INTO "Inventory" ("Id", "CreatedAt", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p8, @p9, @p10, @p11, @p12);
+2025-08-20 11:05:56.482 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2025-08-20 11:05:56.526 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.CreateProduct (Presentation) in 4840.2553ms
+2025-08-20 11:05:56.539 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-20 11:05:56.564 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Products - 201 null application/json; charset=utf-8 5177.6211ms
+2025-08-20 11:06:09.501 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-20 11:06:09.527 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 11:06:09.541 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 11:06:10.004 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-20 11:06:10.053 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 11:06:10.079 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 529.592ms
+2025-08-20 11:06:10.084 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 11:06:10.091 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 591.2131ms
+2025-08-20 11:06:51.431 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 83
+2025-08-20 11:06:51.448 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 11:06:51.465 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-20 11:06:51.541 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-20 11:06:51.555 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 80.4926ms
+2025-08-20 11:06:51.562 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 11:06:51.568 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Stock cannot be negative.
+   at Domain.Entities.Models.Inventory.AdjustStock(Int32 adjustment) in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Inventory.cs:line 26
+   at Application.Features.Commands.AdjustStock.AdjustStockCommandHandler.Handle(AdjustStockCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\StockInventory\Commands\AdjustStock\AdjustStockHandler.cs:line 21
+   at Presentation.Controllers.InventoryController.AdjustStock(AdjustStockCommand command) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\InventoryController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-20 11:06:51.667 +01:00 [ERR] Unhandled Exception: System.InvalidOperationException: Stock cannot be negative.
+   at Domain.Entities.Models.Inventory.AdjustStock(Int32 adjustment) in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Inventory.cs:line 26
+   at Application.Features.Commands.AdjustStock.AdjustStockCommandHandler.Handle(AdjustStockCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\StockInventory\Commands\AdjustStock\AdjustStockHandler.cs:line 21
+   at Presentation.Controllers.InventoryController.AdjustStock(AdjustStockCommand command) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\InventoryController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-20 11:06:51.695 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 500 null application/json; charset=utf-8 263.9527ms
+2025-08-20 11:06:59.461 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 82
+2025-08-20 11:06:59.470 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 11:06:59.476 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-20 11:06:59.495 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-20 11:06:59.517 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-20 11:06:59.531 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-20 11:06:59.534 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 47.8573ms
+2025-08-20 11:06:59.537 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-20 11:06:59.543 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 81.8186ms
+2025-08-20 11:07:15.715 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-20 11:07:15.725 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 11:07:15.732 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 11:07:15.742 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-20 11:07:15.753 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 11:07:15.759 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 18.9915ms
+2025-08-20 11:07:15.763 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-20 11:07:15.767 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 51.2231ms
+2025-08-20 11:08:56.470 +01:00 [INF] Application is shutting down...
+2025-08-20 11:23:03.199 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-20 11:23:03.433 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-20 11:23:03.440 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 11:23:03.444 +01:00 [INF] Hosting environment: Development
+2025-08-20 11:23:03.447 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-20 11:23:16.335 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.html - null null
+2025-08-20 11:23:16.350 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-20 11:23:16.457 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.html - 200 null text/html;charset=utf-8 123.3391ms
+2025-08-20 11:23:16.703 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui.css - null null
+2025-08-20 11:23:16.715 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.css - null null
+2025-08-20 11:23:16.716 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-bundle.js - null null
+2025-08-20 11:23:16.717 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-standalone-preset.js - null null
+2025-08-20 11:23:16.717 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.js - null null
+2025-08-20 11:23:16.747 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.css - 200 202 text/css 31.5895ms
+2025-08-20 11:23:16.777 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 59.9453ms
+2025-08-20 11:23:16.794 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.js - 200 null application/javascript;charset=utf-8 77.3485ms
+2025-08-20 11:23:16.799 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-bundle.js - 200 1485750 text/javascript 82.0717ms
+2025-08-20 11:23:16.777 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui.css - 200 155175 text/css 73.6954ms
+2025-08-20 11:23:17.286 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - null null
+2025-08-20 11:23:17.293 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - null null
+2025-08-20 11:23:17.320 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - 200 628 image/png 26.1171ms
+2025-08-20 11:23:17.602 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 316.517ms
+2025-08-20 11:23:36.837 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products/13ffe505-e0b7-4bc7-a405-168fd38a5416 - null null
+2025-08-20 11:23:36.911 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-20 11:23:36.942 +01:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(System.Guid) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 11:23:39.494 +01:00 [INF] Executed DbCommand (158ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-20 11:23:39.615 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 11:23:39.668 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetProductById (Presentation) in 2711.2615ms
+2025-08-20 11:23:39.673 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-20 11:23:39.690 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products/13ffe505-e0b7-4bc7-a405-168fd38a5416 - 200 null application/json; charset=utf-8 2852.9073ms
+2025-08-20 11:23:48.692 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/increase - application/json 76
+2025-08-20 11:23:48.707 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.IncreaseStock (Presentation)'
+2025-08-20 11:23:48.724 +01:00 [INF] Route matched with {action = "IncreaseStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IncreaseStock(Application.Features.Commands.AdjustStock.IncreaseStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-20 11:23:48.863 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-20 11:23:49.030 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-20 11:23:49.053 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-20 11:23:49.057 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.IncreaseStock (Presentation) in 321.7914ms
+2025-08-20 11:23:49.062 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.IncreaseStock (Presentation)'
+2025-08-20 11:23:49.065 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/increase - 204 null null 373.2322ms
+2025-08-20 11:23:52.376 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products/13ffe505-e0b7-4bc7-a405-168fd38a5416 - null null
+2025-08-20 11:23:52.412 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-20 11:23:52.416 +01:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(System.Guid) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 11:23:52.441 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-20 11:23:52.453 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 11:23:52.457 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetProductById (Presentation) in 36.2143ms
+2025-08-20 11:23:52.461 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-20 11:23:52.464 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products/13ffe505-e0b7-4bc7-a405-168fd38a5416 - 200 null application/json; charset=utf-8 88.1087ms
+2025-08-20 11:24:08.902 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/decrease - application/json 76
+2025-08-20 11:24:08.917 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.DecreaseStock (Presentation)'
+2025-08-20 11:24:08.942 +01:00 [INF] Route matched with {action = "DecreaseStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DecreaseStock(Application.Features.Commands.AdjustStock.DecreaseStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-20 11:24:08.963 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-20 11:24:08.979 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-20 11:24:08.989 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-20 11:24:08.993 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.DecreaseStock (Presentation) in 40.6634ms
+2025-08-20 11:24:08.999 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.DecreaseStock (Presentation)'
+2025-08-20 11:24:09.002 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/decrease - 204 null null 99.9867ms
+2025-08-20 11:24:12.200 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products/13ffe505-e0b7-4bc7-a405-168fd38a5416 - null null
+2025-08-20 11:24:12.210 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-20 11:24:12.217 +01:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(System.Guid) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-20 11:24:12.230 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-20 11:24:12.243 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-20 11:24:12.249 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetProductById (Presentation) in 24.5721ms
+2025-08-20 11:24:12.254 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-20 11:24:12.265 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products/13ffe505-e0b7-4bc7-a405-168fd38a5416 - 200 null application/json; charset=utf-8 64.9659ms
+2025-08-20 11:26:40.192 +01:00 [INF] Application is shutting down...

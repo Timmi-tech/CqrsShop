@@ -1,0 +1,1304 @@
+2025-08-18 13:28:55.702 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 13:28:56.000 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-18 13:28:56.006 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 13:28:56.011 +01:00 [INF] Hosting environment: Development
+2025-08-18 13:28:56.015 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-18 13:29:15.032 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/ - null null
+2025-08-18 13:29:15.057 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-18 13:29:15.253 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/ - 404 0 null 223.1874ms
+2025-08-18 13:29:15.326 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5180/, Response status code: 404
+2025-08-18 13:29:18.840 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger - null null
+2025-08-18 13:29:18.865 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger - 301 0 null 26.1189ms
+2025-08-18 13:29:18.889 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.html - null null
+2025-08-18 13:29:19.035 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.html - 200 null text/html;charset=utf-8 145.8566ms
+2025-08-18 13:29:19.114 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui.css - null null
+2025-08-18 13:29:19.134 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.css - null null
+2025-08-18 13:29:19.136 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-bundle.js - null null
+2025-08-18 13:29:19.137 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.js - null null
+2025-08-18 13:29:19.170 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui.css - 200 155175 text/css 55.9608ms
+2025-08-18 13:29:19.137 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-standalone-preset.js - null null
+2025-08-18 13:29:19.240 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.css - 200 202 text/css 106.1515ms
+2025-08-18 13:29:19.245 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.js - 200 null application/javascript;charset=utf-8 108.3805ms
+2025-08-18 13:29:19.277 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-bundle.js - 200 1485750 text/javascript 140.2835ms
+2025-08-18 13:29:19.313 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 176.194ms
+2025-08-18 13:29:20.022 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - null null
+2025-08-18 13:29:20.055 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - null null
+2025-08-18 13:29:20.060 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - 200 628 image/png 37.6631ms
+2025-08-18 13:29:20.274 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 218.3099ms
+2025-08-18 13:29:33.578 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:29:33.596 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:29:33.633 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:29:36.230 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+2025-08-18 13:31:41.116 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 13:31:41.429 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-18 13:31:41.437 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 13:31:41.441 +01:00 [INF] Hosting environment: Development
+2025-08-18 13:31:41.445 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-18 13:31:45.406 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/UserProfile - null null
+2025-08-18 13:31:45.423 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-18 13:31:45.523 +01:00 [INF] Executing endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-18 13:31:45.557 +01:00 [INF] Route matched with {action = "GetAllUsers", controller = "UserProfile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller Presentation.Controllers.UserProfileController (Presentation).
+2025-08-18 13:31:47.456 +01:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+2025-08-18 13:31:47.559 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.User, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.UserPofileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:31:47.590 +01:00 [INF] Executed action Presentation.Controllers.UserProfileController.GetAllUsers (Presentation) in 2015.5796ms
+2025-08-18 13:31:47.602 +01:00 [INF] Executed endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-18 13:31:47.620 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/UserProfile - 200 null application/json; charset=utf-8 2216.6535ms
+2025-08-18 13:32:07.001 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Products - application/json 165
+2025-08-18 13:32:07.027 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-18 13:32:07.047 +01:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Application.Features.Products.Commands.CreateProduct.CreateProductCommand) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:34:11.513 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 13:34:11.767 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-18 13:34:11.776 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 13:34:11.780 +01:00 [INF] Hosting environment: Development
+2025-08-18 13:34:11.787 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-18 13:34:43.934 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Products - application/json 165
+2025-08-18 13:34:43.955 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-18 13:34:44.058 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-18 13:34:44.092 +01:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Application.Features.Products.Commands.CreateProduct.CreateProductCommand) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:34:46.919 +01:00 [INF] Executed DbCommand (97ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?' (DbType = Boolean), @p15='?', @p16='?' (DbType = DateTime), @p17='?', @p18='?', @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime), @p21='?', @p22='?' (DbType = Guid), @p23='?', @p24='?' (DbType = DateTime), @p25='?', @p26='?', @p27='?' (DbType = Decimal), @p28='?' (DbType = DateTime), @p29='?', @p30='?' (DbType = Guid), @p31='?' (DbType = DateTime), @p32='?' (DbType = Guid), @p33='?' (DbType = Int32), @p34='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "RefreshTokenExpiryTime", "Role", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+INSERT INTO "Product" ("Id", "Category", "CreatedAt", "Description", "Name", "Price", "UpdatedAt", "UserId")
+VALUES (@p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29);
+INSERT INTO "Inventory" ("Id", "CreatedAt", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p30, @p31, @p32, @p33, @p34);
+2025-08-18 13:34:46.989 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2025-08-18 13:34:47.032 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.CreateProduct (Presentation) in 2927.1569ms
+2025-08-18 13:34:47.044 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-18 13:34:47.061 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Products - 201 null application/json; charset=utf-8 3128.9401ms
+2025-08-18 13:35:12.603 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:35:12.630 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:12.643 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:35:12.937 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+2025-08-18 13:35:12.969 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:35:12.988 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 333.7807ms
+2025-08-18 13:35:12.995 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:13.001 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 398.4439ms
+2025-08-18 13:35:34.883 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 81
+2025-08-18 13:35:34.903 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:35:34.918 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-18 13:35:35.090 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-18 13:35:35.121 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-18 13:35:35.135 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 13:35:35.139 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 207.3883ms
+2025-08-18 13:35:35.146 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:35:35.152 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 269.1644ms
+2025-08-18 13:35:40.450 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/UserProfile - null null
+2025-08-18 13:35:40.462 +01:00 [INF] Executing endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-18 13:35:40.479 +01:00 [INF] Route matched with {action = "GetAllUsers", controller = "UserProfile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller Presentation.Controllers.UserProfileController (Presentation).
+2025-08-18 13:35:40.534 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+2025-08-18 13:35:40.553 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.User, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.UserPofileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:35:40.568 +01:00 [INF] Executed action Presentation.Controllers.UserProfileController.GetAllUsers (Presentation) in 75.1253ms
+2025-08-18 13:35:40.576 +01:00 [INF] Executed endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-18 13:35:40.585 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/UserProfile - 200 null application/json; charset=utf-8 134.8204ms
+2025-08-18 13:35:46.605 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:35:46.621 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:46.627 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:35:46.646 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+2025-08-18 13:35:46.657 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:35:46.661 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 20.4477ms
+2025-08-18 13:35:46.665 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:46.670 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 64.8682ms
+2025-08-18 13:35:50.801 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:35:50.815 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:50.820 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:35:50.836 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+2025-08-18 13:35:50.850 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:35:50.859 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 30.263ms
+2025-08-18 13:35:50.864 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:50.867 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 66.3307ms
+2025-08-18 13:35:54.438 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 81
+2025-08-18 13:35:54.449 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:35:54.458 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-18 13:35:54.476 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-18 13:35:54.490 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-18 13:35:54.500 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 13:35:54.506 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 36.6294ms
+2025-08-18 13:35:54.513 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:35:54.518 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 79.6205ms
+2025-08-18 13:35:58.106 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:35:58.122 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:58.130 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:35:58.141 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+2025-08-18 13:35:58.157 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:35:58.165 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 26.8647ms
+2025-08-18 13:35:58.173 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:35:58.180 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 74.599ms
+2025-08-18 13:36:06.655 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products/9ff9f77d-6939-4ce5-b1a3-af4e40d3b55a - null null
+2025-08-18 13:36:06.678 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-18 13:36:06.693 +01:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(System.Guid) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:36:06.811 +01:00 [INF] Executed DbCommand (59ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+FROM "Product" AS p
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-18 13:36:06.819 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:36:06.823 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetProductById (Presentation) in 116.8224ms
+2025-08-18 13:36:06.830 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-18 13:36:06.836 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products/9ff9f77d-6939-4ce5-b1a3-af4e40d3b55a - 200 null application/json; charset=utf-8 181.8185ms
+2025-08-18 13:46:07.513 +01:00 [INF] Application is shutting down...
+2025-08-18 13:48:05.843 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 13:48:06.258 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-18 13:48:06.269 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 13:48:06.274 +01:00 [INF] Hosting environment: Development
+2025-08-18 13:48:06.280 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-18 13:48:12.676 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:48:12.697 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-18 13:48:12.802 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:48:12.834 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:48:14.695 +01:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 13:48:14.807 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:48:14.875 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 2027.5322ms
+2025-08-18 13:48:14.889 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:48:14.908 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 2235.7006ms
+2025-08-18 13:48:32.405 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 81
+2025-08-18 13:48:32.427 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:48:32.448 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-18 13:48:32.633 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-18 13:48:32.773 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-18 13:48:32.797 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 13:48:32.801 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 344.1847ms
+2025-08-18 13:48:32.807 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:48:32.813 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 409.4202ms
+2025-08-18 13:48:36.486 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:48:36.499 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:48:36.504 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:48:36.545 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 13:48:36.559 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:48:36.568 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 51.2495ms
+2025-08-18 13:48:36.574 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:48:36.579 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 92.7573ms
+2025-08-18 13:48:59.349 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 80
+2025-08-18 13:48:59.366 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:48:59.371 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-18 13:48:59.384 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-18 13:48:59.401 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "UpdatedAt" = @p0
+WHERE "Id" = @p1;
+2025-08-18 13:48:59.415 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 13:48:59.420 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 39.3005ms
+2025-08-18 13:48:59.423 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:48:59.427 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 77.6129ms
+2025-08-18 13:49:04.743 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:49:04.758 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:49:04.763 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:49:04.777 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 13:49:04.790 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:49:04.795 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 23.3304ms
+2025-08-18 13:49:04.798 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:49:04.802 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 59.4003ms
+2025-08-18 13:49:56.171 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 82
+2025-08-18 13:49:56.206 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:49:56.216 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-18 13:49:56.230 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-18 13:49:56.243 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-18 13:49:56.251 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 13:49:56.255 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 26.641ms
+2025-08-18 13:49:56.263 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 13:49:56.266 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 95.7312ms
+2025-08-18 13:49:59.289 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:49:59.303 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:49:59.309 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:49:59.325 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 13:49:59.335 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:49:59.342 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 19.505ms
+2025-08-18 13:49:59.348 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:49:59.351 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 62.0648ms
+2025-08-18 13:51:49.271 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Order - application/json 171
+2025-08-18 13:51:49.310 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 13:51:49.319 +01:00 [INF] Route matched with {action = "PlaceOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PlaceOrder(Application.Features.Orders.Commands.CreateOrder.PlaceOrderCommand) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:51:49.365 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2025-08-18 13:51:49.486 +01:00 [INF] Executed DbCommand (65ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-18 13:51:49.671 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime), @p10='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p13='?' (DbType = Decimal), @p14='?' (DbType = Guid), @p15='?' (DbType = Int32), @p16='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+INSERT INTO "Order" ("Id", "CreatedAt", "CustomerId", "OrderDate", "Status", "TotalAmount", "UpdatedAt")
+VALUES (@p3, @p4, @p5, @p6, @p7, @p8, @p9);
+INSERT INTO "OrderItem" ("Id", "CreatedAt", "OrderId", "Price", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2025-08-18 13:51:49.693 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2025-08-18 13:51:49.722 +01:00 [INF] Executed action Presentation.Controllers.OrderController.PlaceOrder (Presentation) in 393.8656ms
+2025-08-18 13:51:49.730 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 13:51:49.732 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Order - 201 null application/json; charset=utf-8 461.6914ms
+2025-08-18 13:51:55.245 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 13:51:55.257 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:51:55.264 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:51:55.280 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 13:51:55.294 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:51:55.301 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 24.8204ms
+2025-08-18 13:51:55.309 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 13:51:55.315 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 70.6592ms
+2025-08-18 13:52:11.013 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - null 0
+2025-08-18 13:52:11.048 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:52:11.060 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:52:11.122 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:52:11.142 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 72.8236ms
+2025-08-18 13:52:11.147 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:52:11.151 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:52:11.212 +01:00 [ERR] Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:52:11.241 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - 500 null application/json; charset=utf-8 227.6415ms
+2025-08-18 13:52:48.068 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order - null null
+2025-08-18 13:52:48.082 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-18 13:52:48.096 +01:00 [INF] Route matched with {action = "GetAllOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders() on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:52:48.124 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."Category", t."CreatedAt0", t."Description", t."Name", t."Price0", t."UpdatedAt0", t."UserId"
+FROM "Order" AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+ORDER BY o."Id", t."Id"
+2025-08-18 13:52:48.140 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.OrderDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 13:52:48.153 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetAllOrders (Presentation) in 46.8594ms
+2025-08-18 13:52:48.160 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-18 13:52:48.163 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order - 200 null application/json; charset=utf-8 94.498ms
+2025-08-18 13:53:01.818 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - null null
+2025-08-18 13:53:01.849 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:53:01.865 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:53:01.899 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:53:01.916 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.OrderDto'.
+2025-08-18 13:53:01.923 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 46.1491ms
+2025-08-18 13:53:01.930 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:53:01.934 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - 200 null application/json; charset=utf-8 116.0167ms
+2025-08-18 13:53:11.808 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/complete - null 0
+2025-08-18 13:53:11.824 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CompleteOrder (Presentation)'
+2025-08-18 13:53:11.840 +01:00 [INF] Route matched with {action = "CompleteOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CompleteOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:53:11.854 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:53:11.868 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Order" SET "Status" = @p0
+WHERE "Id" = @p1;
+2025-08-18 13:53:11.875 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 13:53:11.880 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CompleteOrder (Presentation) in 29.9256ms
+2025-08-18 13:53:11.888 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CompleteOrder (Presentation)'
+2025-08-18 13:53:11.893 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/complete - 204 null null 84.9154ms
+2025-08-18 13:53:20.210 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - null null
+2025-08-18 13:53:20.218 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:53:20.225 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:53:20.309 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:53:20.321 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.OrderDto'.
+2025-08-18 13:53:20.324 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 83.9078ms
+2025-08-18 13:53:20.328 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:53:20.330 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - 200 null application/json; charset=utf-8 120.7755ms
+2025-08-18 13:53:25.202 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - null null
+2025-08-18 13:53:25.213 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:53:25.218 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:53:25.233 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:53:25.248 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.OrderDto'.
+2025-08-18 13:53:25.254 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 26.2961ms
+2025-08-18 13:53:25.262 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:53:25.265 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - 200 null application/json; charset=utf-8 63.443ms
+2025-08-18 13:53:32.640 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - null 0
+2025-08-18 13:53:32.650 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:53:32.664 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:53:32.729 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:53:32.742 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 22.5489ms
+2025-08-18 13:53:32.758 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:53:32.763 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot cancel a completed order.
+   at Domain.Entities.Models.Order.CancelOrder() in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Order.cs:line 27
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 19
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:53:32.827 +01:00 [ERR] Unhandled Exception: System.InvalidOperationException: Cannot cancel a completed order.
+   at Domain.Entities.Models.Order.CancelOrder() in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Order.cs:line 27
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 19
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:53:32.836 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - 500 null application/json; charset=utf-8 195.9139ms
+2025-08-18 13:53:33.041 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - null 0
+2025-08-18 13:53:33.071 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:53:33.079 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:53:33.098 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:53:33.112 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 16.9746ms
+2025-08-18 13:53:33.119 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:53:33.122 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot cancel a completed order.
+   at Domain.Entities.Models.Order.CancelOrder() in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Order.cs:line 27
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 19
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:53:33.148 +01:00 [ERR] Unhandled Exception: System.InvalidOperationException: Cannot cancel a completed order.
+   at Domain.Entities.Models.Order.CancelOrder() in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Order.cs:line 27
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 19
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:53:33.157 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - 500 null application/json; charset=utf-8 116.1504ms
+2025-08-18 13:53:36.878 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - null 0
+2025-08-18 13:53:36.892 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:53:36.900 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:53:36.912 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:53:36.929 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 19.9687ms
+2025-08-18 13:53:36.937 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 13:53:36.943 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot cancel a completed order.
+   at Domain.Entities.Models.Order.CancelOrder() in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Order.cs:line 27
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 19
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:53:36.975 +01:00 [ERR] Unhandled Exception: System.InvalidOperationException: Cannot cancel a completed order.
+   at Domain.Entities.Models.Order.CancelOrder() in C:\Users\user\Desktop\c##\CqrsShop\src\domain\Entities\Models\Order.cs:line 27
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 19
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:53:36.985 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1/cancel - 500 null application/json; charset=utf-8 106.7316ms
+2025-08-18 13:55:01.955 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Products - application/json 165
+2025-08-18 13:55:01.970 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-18 13:55:01.982 +01:00 [INF] Route matched with {action = "CreateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateProduct(Application.Features.Products.Commands.CreateProduct.CreateProductCommand) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 13:55:02.105 +01:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?' (DbType = Boolean), @p15='?', @p16='?' (DbType = DateTime), @p17='?', @p18='?', @p19='?' (DbType = Boolean), @p20='?' (DbType = DateTime), @p21='?', @p22='?' (DbType = Guid), @p23='?', @p24='?' (DbType = DateTime), @p25='?', @p26='?', @p27='?' (DbType = Decimal), @p28='?' (DbType = DateTime), @p29='?', @p30='?' (DbType = Guid), @p31='?' (DbType = DateTime), @p32='?' (DbType = Guid), @p33='?' (DbType = Int32), @p34='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "RefreshTokenExpiryTime", "Role", "SecurityStamp", "TwoFactorEnabled", "UpdatedAt", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+INSERT INTO "Product" ("Id", "Category", "CreatedAt", "Description", "Name", "Price", "UpdatedAt", "UserId")
+VALUES (@p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29);
+INSERT INTO "Inventory" ("Id", "CreatedAt", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p30, @p31, @p32, @p33, @p34);
+2025-08-18 13:55:02.117 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2025-08-18 13:55:02.125 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.CreateProduct (Presentation) in 133.382ms
+2025-08-18 13:55:02.131 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.CreateProduct (Presentation)'
+2025-08-18 13:55:02.135 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Products - 201 null application/json; charset=utf-8 180.4052ms
+2025-08-18 13:55:24.474 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - null null
+2025-08-18 13:55:24.517 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:55:24.522 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:55:24.536 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:55:24.551 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 19.0654ms
+2025-08-18 13:55:24.558 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:55:24.564 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Order not found.
+   at Application.Features.Orders.Queries.GetOrderByIdQueryHandler.Handle(GetOrderByIdQuery request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Queries\GetOrderByIdQueryHandler.cs:line 17
+   at Presentation.Controllers.OrderController.GetOrderById(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:55:24.588 +01:00 [ERR] Unhandled Exception: System.Collections.Generic.KeyNotFoundException: Order not found.
+   at Application.Features.Orders.Queries.GetOrderByIdQueryHandler.Handle(GetOrderByIdQuery request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Queries\GetOrderByIdQueryHandler.cs:line 17
+   at Presentation.Controllers.OrderController.GetOrderById(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:55:24.596 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - 500 null application/json; charset=utf-8 121.7438ms
+2025-08-18 13:55:28.269 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - null null
+2025-08-18 13:55:28.286 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:55:28.292 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:55:28.303 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:55:28.321 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 20.8468ms
+2025-08-18 13:55:28.326 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:55:28.334 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Order not found.
+   at Application.Features.Orders.Queries.GetOrderByIdQueryHandler.Handle(GetOrderByIdQuery request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Queries\GetOrderByIdQueryHandler.cs:line 17
+   at Presentation.Controllers.OrderController.GetOrderById(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:55:28.363 +01:00 [ERR] Unhandled Exception: System.Collections.Generic.KeyNotFoundException: Order not found.
+   at Application.Features.Orders.Queries.GetOrderByIdQueryHandler.Handle(GetOrderByIdQuery request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Queries\GetOrderByIdQueryHandler.cs:line 17
+   at Presentation.Controllers.OrderController.GetOrderById(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 13:55:28.400 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - 500 null application/json; charset=utf-8 130.9368ms
+2025-08-18 13:55:44.101 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - null null
+2025-08-18 13:55:44.113 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:55:44.119 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 13:55:44.133 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 13:55:44.146 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.OrderDto'.
+2025-08-18 13:55:44.152 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 22.7571ms
+2025-08-18 13:55:44.158 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 13:55:44.163 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/f8580aca-cb14-4d8a-975a-6a5471e08cd1 - 200 null application/json; charset=utf-8 62.4117ms
+2025-08-18 14:05:18.019 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Order - application/json 171
+2025-08-18 14:05:18.029 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 14:05:18.034 +01:00 [INF] Route matched with {action = "PlaceOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PlaceOrder(Application.Features.Orders.Commands.CreateOrder.PlaceOrderCommand) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:05:18.163 +01:00 [INF] Executed DbCommand (38ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2025-08-18 14:05:18.187 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-18 14:05:18.213 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime), @p10='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p13='?' (DbType = Decimal), @p14='?' (DbType = Guid), @p15='?' (DbType = Int32), @p16='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+INSERT INTO "Order" ("Id", "CreatedAt", "CustomerId", "OrderDate", "Status", "TotalAmount", "UpdatedAt")
+VALUES (@p3, @p4, @p5, @p6, @p7, @p8, @p9);
+INSERT INTO "OrderItem" ("Id", "CreatedAt", "OrderId", "Price", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2025-08-18 14:05:18.226 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2025-08-18 14:05:18.234 +01:00 [INF] Executed action Presentation.Controllers.OrderController.PlaceOrder (Presentation) in 191.9388ms
+2025-08-18 14:05:18.241 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 14:05:18.245 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Order - 201 null application/json; charset=utf-8 226.0329ms
+2025-08-18 14:05:25.925 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 14:05:25.942 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:05:25.950 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 14:05:25.960 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 14:05:25.974 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 14:05:25.978 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 21.6434ms
+2025-08-18 14:05:25.983 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:05:25.991 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 65.4291ms
+2025-08-18 14:05:46.623 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Order - application/json 171
+2025-08-18 14:05:46.638 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 14:05:46.643 +01:00 [INF] Route matched with {action = "PlaceOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PlaceOrder(Application.Features.Orders.Commands.CreateOrder.PlaceOrderCommand) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:05:46.660 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2025-08-18 14:05:46.675 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-18 14:05:46.685 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime), @p5='?', @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime), @p10='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p13='?' (DbType = Decimal), @p14='?' (DbType = Guid), @p15='?' (DbType = Int32), @p16='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+INSERT INTO "Order" ("Id", "CreatedAt", "CustomerId", "OrderDate", "Status", "TotalAmount", "UpdatedAt")
+VALUES (@p3, @p4, @p5, @p6, @p7, @p8, @p9);
+INSERT INTO "OrderItem" ("Id", "CreatedAt", "OrderId", "Price", "ProductId", "Quantity", "UpdatedAt")
+VALUES (@p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2025-08-18 14:05:46.699 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'.
+2025-08-18 14:05:46.704 +01:00 [INF] Executed action Presentation.Controllers.OrderController.PlaceOrder (Presentation) in 46.9297ms
+2025-08-18 14:05:46.709 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 14:05:46.714 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Order - 201 null application/json; charset=utf-8 90.9974ms
+2025-08-18 14:05:55.844 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 14:05:55.855 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:05:55.860 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 14:05:55.873 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 14:05:55.883 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 14:05:55.889 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 20.6266ms
+2025-08-18 14:05:55.897 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:05:55.903 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 58.3726ms
+2025-08-18 14:06:05.510 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Order - application/json 171
+2025-08-18 14:06:05.518 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 14:06:05.526 +01:00 [INF] Route matched with {action = "PlaceOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PlaceOrder(Application.Features.Orders.Commands.CreateOrder.PlaceOrderCommand) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:06:05.536 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__userId_0
+LIMIT 2
+2025-08-18 14:06:05.551 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-18 14:06:05.562 +01:00 [INF] Executed action Presentation.Controllers.OrderController.PlaceOrder (Presentation) in 29.3873ms
+2025-08-18 14:06:05.570 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.PlaceOrder (Presentation)'
+2025-08-18 14:06:05.574 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Insufficient stock for products.
+   at Application.Features.Orders.Commands.CreateOrder.PlaceOrderHandler.Handle(PlaceOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CreateOrder\PlaceOrderHandler.cs:line 30
+   at Presentation.Controllers.OrderController.PlaceOrder(PlaceOrderCommand command) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:06:05.604 +01:00 [ERR] Unhandled Exception: System.InvalidOperationException: Insufficient stock for products.
+   at Application.Features.Orders.Commands.CreateOrder.PlaceOrderHandler.Handle(PlaceOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CreateOrder\PlaceOrderHandler.cs:line 30
+   at Presentation.Controllers.OrderController.PlaceOrder(PlaceOrderCommand command) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:06:05.612 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Order - 500 null application/json; charset=utf-8 102.8401ms
+2025-08-18 14:06:16.000 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order - null null
+2025-08-18 14:06:16.033 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-18 14:06:16.037 +01:00 [INF] Route matched with {action = "GetAllOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders() on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:06:16.061 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."Category", t."CreatedAt0", t."Description", t."Name", t."Price0", t."UpdatedAt0", t."UserId"
+FROM "Order" AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+ORDER BY o."Id", t."Id"
+2025-08-18 14:06:16.073 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.OrderDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 14:06:16.078 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetAllOrders (Presentation) in 30.8071ms
+2025-08-18 14:06:16.086 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-18 14:06:16.090 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order - 200 null application/json; charset=utf-8 90.1221ms
+2025-08-18 14:06:58.222 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - null 0
+2025-08-18 14:06:58.229 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:06:58.232 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:06:58.255 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 14:06:58.293 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 44.3144ms
+2025-08-18 14:06:58.299 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:06:58.303 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:06:58.323 +01:00 [ERR] Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:06:58.333 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - 500 null application/json; charset=utf-8 111.3766ms
+2025-08-18 14:07:03.740 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 14:07:03.752 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:07:03.756 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 14:07:03.773 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 14:07:03.779 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 14:07:03.785 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 13.7934ms
+2025-08-18 14:07:03.793 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:07:03.797 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 56.7214ms
+2025-08-18 14:07:14.546 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order - null null
+2025-08-18 14:07:14.581 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-18 14:07:14.585 +01:00 [INF] Route matched with {action = "GetAllOrders", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllOrders() on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:07:14.596 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."Category", t."CreatedAt0", t."Description", t."Name", t."Price0", t."UpdatedAt0", t."UserId"
+FROM "Order" AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+ORDER BY o."Id", t."Id"
+2025-08-18 14:07:14.608 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.OrderDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 14:07:14.614 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetAllOrders (Presentation) in 21.7108ms
+2025-08-18 14:07:14.620 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetAllOrders (Presentation)'
+2025-08-18 14:07:14.623 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order - 200 null application/json; charset=utf-8 76.8755ms
+2025-08-18 14:07:43.350 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d - null null
+2025-08-18 14:07:43.365 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 14:07:43.372 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:07:43.384 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 14:07:43.396 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.OrderDto'.
+2025-08-18 14:07:43.400 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 20.918ms
+2025-08-18 14:07:43.406 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 14:07:43.410 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d - 200 null application/json; charset=utf-8 59.4402ms
+2025-08-18 14:08:02.485 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - null 0
+2025-08-18 14:08:02.494 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:08:02.498 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:08:02.517 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 14:08:02.530 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 16.7462ms
+2025-08-18 14:08:02.538 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:08:02.541 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:08:02.562 +01:00 [ERR] Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:08:02.570 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - 500 null application/json; charset=utf-8 85.6467ms
+2025-08-18 14:09:29.749 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - null 0
+2025-08-18 14:09:29.767 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:09:29.774 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:09:29.790 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 14:09:29.802 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 17.5665ms
+2025-08-18 14:09:29.813 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:09:29.819 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:09:29.840 +01:00 [ERR] Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:09:29.851 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - 500 null application/json; charset=utf-8 102.0279ms
+2025-08-18 14:09:35.041 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d - null null
+2025-08-18 14:09:35.057 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 14:09:35.062 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:09:35.073 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 14:09:35.088 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.OrderDto'.
+2025-08-18 14:09:35.095 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 23.4823ms
+2025-08-18 14:09:35.104 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 14:09:35.111 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d - 200 null application/json; charset=utf-8 70.2283ms
+2025-08-18 14:09:46.074 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - null 0
+2025-08-18 14:09:46.087 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:09:46.093 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:09:46.110 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id"
+2025-08-18 14:09:46.125 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 17.786ms
+2025-08-18 14:09:46.132 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:09:46.140 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:09:46.167 +01:00 [ERR] Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at Application.Features.Orders.Commands.CancelOrder.CancelOrderHandler.Handle(CancelOrderCommand request, CancellationToken cancellationToken) in C:\Users\user\Desktop\c##\CqrsShop\src\application\Features\Orders\Commands\CancelOrder\CancelOrderHandler.cs:line 29
+   at Presentation.Controllers.OrderController.CancelOrder(Guid orderId) in C:\Users\user\Desktop\c##\CqrsShop\src\presentation\Controllers\OrderController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-08-18 14:09:46.179 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - 500 null application/json; charset=utf-8 104.5222ms
+2025-08-18 14:11:08.418 +01:00 [INF] Application is shutting down...
+2025-08-18 14:13:27.723 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 14:13:28.017 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-18 14:13:28.026 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 14:13:28.030 +01:00 [INF] Hosting environment: Development
+2025-08-18 14:13:28.034 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-18 14:14:36.263 +01:00 [INF] Application is shutting down...
+2025-08-18 14:14:44.372 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-18 14:14:44.599 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-18 14:14:44.606 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-18 14:14:44.611 +01:00 [INF] Hosting environment: Development
+2025-08-18 14:14:44.614 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-18 14:14:47.702 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - null 0
+2025-08-18 14:14:47.725 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-18 14:14:47.868 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:14:47.917 +01:00 [INF] Route matched with {action = "CancelOrder", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CancelOrder(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:14:50.545 +01:00 [INF] Executed DbCommand (70ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId", t0."Id1", t0."CreatedAt1", t0."ProductId0", t0."Quantity0", t0."UpdatedAt1"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId", i."Id" AS "Id1", i."CreatedAt" AS "CreatedAt1", i."ProductId" AS "ProductId0", i."Quantity" AS "Quantity0", i."UpdatedAt" AS "UpdatedAt1"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+    LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id", t0."Id0"
+2025-08-18 14:14:50.923 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p4='?' (DbType = Guid), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+UPDATE "Order" SET "Status" = @p3
+WHERE "Id" = @p4;
+2025-08-18 14:14:50.966 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 14:14:50.975 +01:00 [INF] Executed action Presentation.Controllers.OrderController.CancelOrder (Presentation) in 3036.8211ms
+2025-08-18 14:14:50.994 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.CancelOrder (Presentation)'
+2025-08-18 14:14:51.061 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d/cancel - 204 null null 3361.6143ms
+2025-08-18 14:15:02.839 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d - null null
+2025-08-18 14:15:02.870 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 14:15:02.883 +01:00 [INF] Route matched with {action = "GetOrderById", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrderById(System.Guid) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-18 14:15:02.969 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."CustomerId", t."OrderDate", t."Status", t."TotalAmount", t."UpdatedAt", t0."Id", t0."CreatedAt", t0."OrderId", t0."Price", t0."ProductId", t0."Quantity", t0."UpdatedAt", t0."Id0", t0."Category", t0."CreatedAt0", t0."Description", t0."Name", t0."Price0", t0."UpdatedAt0", t0."UserId", t0."Id1", t0."CreatedAt1", t0."ProductId0", t0."Quantity0", t0."UpdatedAt1"
+FROM (
+    SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt"
+    FROM "Order" AS o
+    WHERE o."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId", i."Id" AS "Id1", i."CreatedAt" AS "CreatedAt1", i."ProductId" AS "ProductId0", i."Quantity" AS "Quantity0", i."UpdatedAt" AS "UpdatedAt1"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+    LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+) AS t0 ON t."Id" = t0."OrderId"
+ORDER BY t."Id", t0."Id", t0."Id0"
+2025-08-18 14:15:02.988 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.OrderDto'.
+2025-08-18 14:15:03.031 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrderById (Presentation) in 141.6475ms
+2025-08-18 14:15:03.038 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrderById (Presentation)'
+2025-08-18 14:15:03.045 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/89e43a20-a7e2-43f0-b642-418fffd3db7d - 200 null application/json; charset=utf-8 205.2117ms
+2025-08-18 14:15:14.749 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - application/json 82
+2025-08-18 14:15:14.767 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 14:15:14.781 +01:00 [INF] Route matched with {action = "AdjustStock", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AdjustStock(Application.Features.Commands.AdjustStock.AdjustStockCommand) on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-18 14:15:14.836 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__productId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Inventory" AS i
+WHERE i."ProductId" = @__productId_0
+LIMIT 1
+2025-08-18 14:15:14.845 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Inventory" SET "Quantity" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2;
+2025-08-18 14:15:14.856 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-18 14:15:14.859 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.AdjustStock (Presentation) in 70.4942ms
+2025-08-18 14:15:14.863 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.AdjustStock (Presentation)'
+2025-08-18 14:15:14.866 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Inventory/adjust - 204 null null 117.2802ms
+2025-08-18 14:15:26.136 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-18 14:15:26.151 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:15:26.163 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-18 14:15:26.198 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-18 14:15:26.215 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-18 14:15:26.248 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 72.8477ms
+2025-08-18 14:15:26.257 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-18 14:15:26.262 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 125.6271ms
