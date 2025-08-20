@@ -8,32 +8,22 @@ namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/UserProfile")]
-    public class UserProfileController : ControllerBase
+    public class UserProfileController(IMediator mediator) : ControllerBase
     {
-        private readonly IMediator _mediator;
-
-        public UserProfileController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        private readonly IMediator _mediator = mediator;
 
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetUserProfile(string userId)
         {
-            var query = new GetUserByIdQuery(userId);
-            var userProfile = await _mediator.Send(query);
-
-            if (userProfile == null)
-            {
-                throw new UserProfileNotFoundException(userId);
-            }
+            GetUserByIdQuery  query = new(userId);
+            UserPofileDto userProfile = await _mediator.Send(query) ?? throw new UserProfileNotFoundException(userId);
             return Ok(userProfile);
         }
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
-            var query = new GetAllUserProfilesQuery();
-            var users = await _mediator.Send(query);
+            GetAllUserProfilesQuery query = new();
+            IEnumerable<UserPofileDto> users = await _mediator.Send(query);
             return Ok(users);
         }
          // PUT: api/UserProfile/{id}

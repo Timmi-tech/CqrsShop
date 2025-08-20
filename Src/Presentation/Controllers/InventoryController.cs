@@ -6,16 +6,10 @@ namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/Inventory")]
-
-
-    public class InventoryController : ControllerBase
+    public class InventoryController(IMediator mediator) : ControllerBase
     {
-        private readonly IMediator _mediator;
+        private readonly IMediator _mediator = mediator;
 
-        public InventoryController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
         /// <summary>
         /// Adjust stock (increase)
         /// </summary>

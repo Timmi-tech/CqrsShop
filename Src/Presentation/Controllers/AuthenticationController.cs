@@ -9,14 +9,9 @@ namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/Authentication")]
-    public class AuthenticationController : ControllerBase
+    public class AuthenticationController(IMediator mediator) : ControllerBase
     {
-        private readonly IMediator _mediator;
-
-        public AuthenticationController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        private readonly IMediator _mediator = mediator;
 
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] UserForRegistrationDto dto)
@@ -26,7 +21,7 @@ namespace Presentation.Controllers
                 return Ok(BadRequest(ModelState));
             }
 
-            var command = new RegisterUserCommand(dto);
+            RegisterUserCommand command = new(dto);
             IdentityResult result = await _mediator.Send(command);
 
             if (result.Succeeded)
@@ -34,13 +29,13 @@ namespace Presentation.Controllers
                 return Ok(new { Message = "User registered successfully." });
             }
 
-            var errors = result.Errors.Select(e => e.Description);
+            IEnumerable<string> errors = result.Errors.Select(e => e.Description);
             return BadRequest(new { Errors = errors });
         }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserForAuthenticationDto userDto)
         {
-            var command = new LoginUserCommand(userDto);
+            LoginUserCommand command = new(userDto);
             var token = await _mediator.Send(command);
 
             return Ok(token); // TokenDto is returned

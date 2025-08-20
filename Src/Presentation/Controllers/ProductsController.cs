@@ -1,3 +1,4 @@
+using Application.DTOs;
 using Application.Features.Products.Commands.CreateProduct;
 using Application.Features.Products.Queries;
 using MediatR;
@@ -7,20 +8,15 @@ namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/Products")]
-    public class ProductsController : ControllerBase
+    public class ProductsController(IMediator mediator) : ControllerBase
     {
-        private readonly IMediator _mediator;
-
-        public ProductsController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        private readonly IMediator _mediator = mediator;
 
         // POST: api/products
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
         {
-            var productId = await _mediator.Send(command);
+            Guid productId = await _mediator.Send(command);
             return CreatedAtAction(nameof(GetProductById), new { id = productId }, productId);
         }
 
@@ -28,14 +24,14 @@ namespace Presentation.Controllers
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> GetProductById(Guid id)
         {
-            var products = await _mediator.Send(new GetProductsByIdQuery(new List<Guid> { id }));
+            IEnumerable<ProductDto> products = await _mediator.Send(new GetProductsByIdQuery([id]));
             return Ok(products);
         }
         // GET: api/products
         [HttpGet]
         public async Task<IActionResult> GetAllProducts()
         {
-            var products = await _mediator.Send(new GetAllProductsQuery());
+            IEnumerable<ProductDto> products = await _mediator.Send(new GetAllProductsQuery());
             return Ok(products);
         }
 
