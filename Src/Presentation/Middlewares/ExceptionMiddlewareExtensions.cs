@@ -15,16 +15,16 @@ namespace Presentation.Middlewares
                 {
                     context.Response.ContentType = "application/problem+json";
 
-                    var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+                    IExceptionHandlerFeature? contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                     if (contextFeature == null)
                         return;
 
-                    var exception = contextFeature.Error;
-                    var statusCode = MapToStatusCode(exception);
+                    Exception  exception = contextFeature.Error;
+                    int statusCode = MapToStatusCode(exception);
 
                     context.Response.StatusCode = statusCode;
 
-                    var problemDetails = new ProblemDetails
+                    ProblemDetails problemDetails = new()
                     {
                         Type = $"https://httpstatuses.com/{statusCode}",
                         Status = statusCode,

@@ -4,14 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class RepositoryWriteDbContext : IdentityDbContext<User>
+    public class RepositoryWriteDbContext(DbContextOptions<RepositoryWriteDbContext> options) : IdentityDbContext<User>(options)
     {
-        public RepositoryWriteDbContext(DbContextOptions<RepositoryWriteDbContext> options)
-            : base(options)
-        {
-        }
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

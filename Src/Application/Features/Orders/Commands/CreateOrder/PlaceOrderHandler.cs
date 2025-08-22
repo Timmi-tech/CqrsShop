@@ -26,7 +26,7 @@ namespace Application.Features.Orders.Commands.CreateOrder
             {
                 var product = products.First(p => p.Id == item.ProductId);
 
-                if (!product.Inventory.HasSufficientStock(item.Quantity))
+                if (product.Inventory == null || !product.Inventory.HasSufficientStock(item.Quantity))
                     throw new InvalidOperationException($"Insufficient stock for {product.Name}.");
                 // Reduce stock using AdjustStock with negative value
                 product.Inventory.AdjustStock(-item.Quantity);    
@@ -36,7 +36,7 @@ namespace Application.Features.Orders.Commands.CreateOrder
             _repositoryManager.Order.CreateOrder(order);
 
             await _repositoryManager.SaveAsync();
-
+            
             return order.Id;
         }
     }

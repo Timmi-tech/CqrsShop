@@ -368,3 +368,20 @@ WHERE "Id" = @p21 AND "ConcurrencyStamp" = @p22;
 2025-08-20 11:55:32.967 +01:00 [INF] Executed endpoint 'Presentation.Controllers.AuthenticationController.Login (Presentation)'
 2025-08-20 11:55:32.967 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Authentication/login - 200 null application/json; charset=utf-8 247.3673ms
 2025-08-20 11:56:33.853 +01:00 [INF] Application is shutting down...
+2025-08-20 11:57:36.984 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-20 11:57:37.201 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-20 11:57:37.203 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 11:57:37.203 +01:00 [INF] Hosting environment: Development
+2025-08-20 11:57:37.203 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-20 12:12:36.370 +01:00 [INF] Application is shutting down...
+2025-08-20 12:12:54.372 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-20 12:12:54.643 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-20 12:12:54.650 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 12:12:54.654 +01:00 [INF] Hosting environment: Development
+2025-08-20 12:12:54.658 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-20 12:14:30.525 +01:00 [INF] Application is shutting down...
+2025-08-20 16:17:41.141 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-20 16:17:41.451 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-20 16:17:41.459 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-20 16:17:41.463 +01:00 [INF] Hosting environment: Development
+2025-08-20 16:17:41.468 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation

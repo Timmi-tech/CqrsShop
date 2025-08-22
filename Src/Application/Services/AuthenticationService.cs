@@ -31,7 +31,7 @@ namespace Application.Services
         public async Task<IdentityResult> RegisterUser(UserForRegistrationDto
         userForRegistration)
         {
-            var user = new User
+            User user = new()
             {
                 FirstName = userForRegistration.Firstname,
                 LastName = userForRegistration.Lastname,
@@ -39,12 +39,12 @@ namespace Application.Services
                 Email = userForRegistration.Email,
                 Role = UserRole.Customer
             };
-            var result = await _userManager.CreateAsync(user, userForRegistration.Password);
+            IdentityResult result = await _userManager.CreateAsync(user, userForRegistration.Password);
             return result;
         }
         public async Task<User> ValidateUser(UserForAuthenticationDto userForAuth)
         {
-            var user = await _userManager.FindByEmailAsync(userForAuth.Email!);
+            User? user = await _userManager.FindByEmailAsync(userForAuth.Email!);
             if (user == null)
             {
                 _logger.LogWarn($"Authentication failed. No user found with email: {userForAuth.Email}");
@@ -59,12 +59,12 @@ namespace Application.Services
         }
         public async Task<TokenDto> CreateToken(User user,bool populateExp)
         {
-            var signingCredentials = GetSigningCredentials();
-            var claims = await GetClaims(user);
-            var tokenOptions = GenerateTokenOptions(signingCredentials, claims);
+            SigningCredentials signingCredentials = GetSigningCredentials();
+            List<Claim> claims = await GetClaims(user);
+            JwtSecurityToken tokenOptions = GenerateTokenOptions(signingCredentials, claims);
 
 
-            var refreshToken = GenerateRefreshToken();
+            string refreshToken = GenerateRefreshToken();
 
             user.RefreshToken = HashRefreshToken(refreshToken);
 
@@ -75,30 +75,29 @@ namespace Application.Services
 
             await _userManager.UpdateAsync(user);
 
-            var accessToken = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+            string accessToken = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
 
             return new TokenDto(accessToken, refreshToken);
         }
         private SigningCredentials GetSigningCredentials()
         {
-            var key = Encoding.UTF8.GetBytes(_jwtConfiguration.Secret!);
-            var secret = new SymmetricSecurityKey(key);
+            byte[] key = Encoding.UTF8.GetBytes(_jwtConfiguration.Secret!);
+            SymmetricSecurityKey secret = new(key);
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
         }
-        private Task<List<Claim>> GetClaims(User user)
+        private static Task<List<Claim>> GetClaims(User user)
         {
-            var claims = new List<Claim>
-            {
+            List<Claim> claims =
+            [
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
                 new Claim(ClaimTypes.Name, user.UserName!),
                 new Claim(ClaimTypes.Role, user.Role.ToString()) // Add this line
-            };
+            ];
             return Task.FromResult(claims);
         }
         private JwtSecurityToken GenerateTokenOptions(SigningCredentials signingCredentials, List<Claim> claims) 
         { 
-            var tokenOptions = new JwtSecurityToken 
-            ( 
+            JwtSecurityToken  tokenOptions = new( 
                 issuer: _jwtConfiguration.ValidIssuer,
                 audience: _jwtConfiguration.ValidAudience,
                 claims: claims,
@@ -107,28 +106,23 @@ namespace Application.Services
             ); 
                 return tokenOptions;
             }
-        private string GenerateRefreshToken()
+        private static string GenerateRefreshToken()
         {
-            var randomNumber = new byte[32];
-            using (var rng = RandomNumberGenerator.Create())
-            {
-                rng.GetBytes(randomNumber);
-                return Convert.ToBase64String(randomNumber);  
-            }
+            byte[] randomNumber = new byte[32];
+            using RandomNumberGenerator rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
         }
-        private string HashRefreshToken(string refreshToken)
+        private static string HashRefreshToken(string refreshToken)
         {
-            using (var sha256 = SHA256.Create())
-            {
-                var tokenBytes = Encoding.UTF8.GetBytes(refreshToken);
-                var hashBytes = sha256.ComputeHash(tokenBytes);
-                return Convert.ToBase64String(hashBytes);
-            }
+            byte[] tokenBytes = Encoding.UTF8.GetBytes(refreshToken);
+            byte[] hashBytes = SHA256.HashData(tokenBytes);
+            return Convert.ToBase64String(hashBytes);
         }
         // Add the GetPrincipalFromExpiredToken method to the AuthenticationService class.
         private ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
         {
-        var tokenValidationParameters = new TokenValidationParameters
+        TokenValidationParameters tokenValidationParameters = new()
         {
             ValidateAudience = true,
             ValidateIssuer = true,
@@ -140,31 +134,27 @@ namespace Application.Services
             ClockSkew = TimeSpan.FromMinutes(5) 
         };
 
-        var tokenHandler = new JwtSecurityTokenHandler();
-        var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out var securityToken);
+        JwtSecurityTokenHandler tokenHandler = new();
+        ClaimsPrincipal principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken securityToken);
 
-        var jwtSecurityToken = securityToken as JwtSecurityToken;
-        if (jwtSecurityToken == null || 
-        !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
-        {
-            throw new SecurityTokenException("Invalid token Format");
-        }
+            if (securityToken is not JwtSecurityToken jwtSecurityToken ||
+            !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+            {
+                throw new SecurityTokenException("Invalid token Format");
+            }
 
-        return principal;   
+            return principal;   
         }
         
         public async Task<TokenDto> RefreshToken(TokenDto tokenDto)
         {
-            var principal = GetPrincipalFromExpiredToken(tokenDto.AccessToken);
-            var username = principal.Identity?.Name;
+            ClaimsPrincipal principal = GetPrincipalFromExpiredToken(tokenDto.AccessToken);
+            string? username = principal.Identity?.Name;
             if (string.IsNullOrEmpty(username))
                 throw new SecurityTokenException("Invalid token - username not found");
 
-            var user = await _userManager.FindByNameAsync(username);
-            if (user == null)
-                throw new SecurityTokenException("Invalid token - user not found");
-
-            var refreshTokenHash = HashRefreshToken(tokenDto.RefreshToken);
+            User? user = await _userManager.FindByNameAsync(username) ?? throw new SecurityTokenException("Invalid token - user not found");
+            string refreshTokenHash = HashRefreshToken(tokenDto.RefreshToken);
             if (user.RefreshToken != refreshTokenHash)
             {
                 _logger.LogWarn($"Invalid refresh token attempt for user: {username}");

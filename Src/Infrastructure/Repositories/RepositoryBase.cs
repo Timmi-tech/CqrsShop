@@ -4,14 +4,10 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Repositories
 {
-    public class ReadRepository<T> : IReadRepository<T> where T : class
+    public class ReadRepository<T>(RepositoryWriteDbContext repositoryReadContextFactory) : IReadRepository<T> where T : class
     {
-        protected readonly RepositoryWriteDbContext _repositoryReadContextFactory;
+        protected readonly RepositoryWriteDbContext _repositoryReadContextFactory = repositoryReadContextFactory;
 
-        public ReadRepository(RepositoryWriteDbContext repositoryReadContextFactory)
-        {
-            _repositoryReadContextFactory = repositoryReadContextFactory;
-        }
         public IQueryable<T> FindAll(bool trackChanges) =>
         !trackChanges ?
               _repositoryReadContextFactory.Set<T>()

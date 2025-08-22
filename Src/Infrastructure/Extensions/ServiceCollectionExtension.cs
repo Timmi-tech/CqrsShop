@@ -47,7 +47,7 @@ namespace Infrastructure.Extensions
             opts.UseNpgsql(configuration.GetConnectionString("PostgresConnection")));
         public static void ConfigureIdentity(this IServiceCollection services)
         {
-            var builder = services.AddIdentity<User, IdentityRole>(options =>
+            IdentityBuilder builder = services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 6;
@@ -68,7 +68,7 @@ namespace Infrastructure.Extensions
         {
             Env.Load();
 
-            var jwtConfiguration = new JwtConfiguration();
+            JwtConfiguration jwtConfiguration = new();
             configuration.Bind(jwtConfiguration.Section, jwtConfiguration);
             var secretKey = Environment.GetEnvironmentVariable("JWT_SECRET");
 

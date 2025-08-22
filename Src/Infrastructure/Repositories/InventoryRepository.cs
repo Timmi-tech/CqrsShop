@@ -16,7 +16,7 @@ namespace Infrastructure.Repositories
         }
         public async Task AdjustStockAsync(Guid productId, int quantityChange, bool trackChanges)
         {
-            var inventory = await GetInventoryByProductIdAsync(productId, trackChanges)
+            Inventory inventory = await GetInventoryByProductIdAsync(productId, trackChanges)
                 ?? throw new KeyNotFoundException($"Inventory not found for ProductId: {productId}");
 
             inventory.AdjustStock(quantityChange);

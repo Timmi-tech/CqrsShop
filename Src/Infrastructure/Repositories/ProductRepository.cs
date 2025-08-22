@@ -5,13 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-  public class ProductRepository : ReadRepository<Product>, IProductRepository
+  public class ProductRepository(RepositoryWriteDbContext repositoryReadContextFactory) : ReadRepository<Product>(repositoryReadContextFactory), IProductRepository
   {
-    public ProductRepository(RepositoryWriteDbContext repositoryReadContextFactory) : base(repositoryReadContextFactory)
-    {
-    }
-    // Get product(s) by multiple IDs
-    public async Task<IEnumerable<Product>> GetProductsByIdsAsync(IEnumerable<Guid> productIds, bool trackChanges) =>
+        // Get product(s) by multiple IDs
+        public async Task<IEnumerable<Product>> GetProductsByIdsAsync(IEnumerable<Guid> productIds, bool trackChanges) =>
         await FindByCondition(p => productIds.Contains(p.Id), trackChanges)
             .Include(p => p.Inventory) // Include Inventory if needed
             .ToListAsync();
