@@ -10,13 +10,13 @@ namespace Infrastructure.Repositories
         // Get product(s) by multiple IDs
         public async Task<IEnumerable<Product>> GetProductsByIdsAsync(IEnumerable<Guid> productIds, bool trackChanges) =>
         await FindByCondition(p => productIds.Contains(p.Id), trackChanges)
-            .Include(p => p.Inventory) // Include Inventory if needed
+            .Include(p => p.Inventory) 
             .ToListAsync();
 
 
     //  Get all Products
     public async Task<IEnumerable<Product?>> GetAllProductsAsync(bool trackChanges) => await FindAll(trackChanges)
-        .Include(p => p.Inventory) // Include Inventory if needed
+        .Include(p => p.Inventory)
         .ToListAsync();
 
     public void CreateProduct(Product product) => Create(product);

@@ -2,6 +2,7 @@ using Application.DTOs;
 using Application.Interfaces;
 using Application.Interfaces.Contracts;
 using Application.Interfaces.Services.Contracts;
+using Domain.Common;
 using Domain.Entities.Models;
 
 namespace Application.Services
@@ -11,15 +12,15 @@ namespace Application.Services
         private readonly IRepositoryManager _repository = repository;
         private readonly ILoggerManager _logger = logger;
 
-        public async Task<UserPofileDto> GetUserProfileAsync(string userId)
+        public async Task<Result<UserPofileDto>> GetUserProfileAsync(string userId)
         {
             User? user = await _repository.User.GetUserProfileAsync(userId, trackChanges: false);
             if (user == null)
             {
                 _logger.LogError($"User with id {userId} not found.");
-                throw new UserProfileNotFoundException(userId);
+                return Result<UserPofileDto>.Failure(Error.NotFound("UserProfile", userId));
             }
-            return new UserPofileDto
+            UserPofileDto dto = new()
             {
                 Id = user.Id,
                 Firstname = user.FirstName,
@@ -27,11 +28,12 @@ namespace Application.Services
                 Email = user.Email!,
                 Username = user.UserName!
             };
-        }
-        public async Task<IEnumerable<UserPofileDto>> GetAllUserProfilesAsync()
+            return Result<UserPofileDto>.Success(dto);  
+            }
+        public async Task<Result<IEnumerable<UserPofileDto>>> GetAllUserProfilesAsync()
         {
             IEnumerable<User> users = await _repository.User.GetAllUserProfilesAsync(trackChanges: false);
-            return users.Select(user => new UserPofileDto
+            var dtos = users.Select(user => new UserPofileDto
             {
                 Id = user.Id,
                 Firstname = user.FirstName,
@@ -40,15 +42,22 @@ namespace Application.Services
                 Username = user.UserName!,
                 Role = user.Role.ToString()
             });
+            return Result<IEnumerable<UserPofileDto>>.Success(dtos);
         }
-       public async Task  UpdateUserProfileAsync(string userId, UserUpdateProfileDto userUpdateProfileDto, bool trackChanges)
+        public async Task<Result> UpdateUserProfileAsync(string userId, UserUpdateProfileDto userUpdateProfileDto, bool trackChanges)
         {
-            User userUpdateEntity = await _repository.User.GetUserProfileAsync(userId, trackChanges) ?? throw new UserProfileNotFoundException(userId);
+            User? userUpdateEntity = await _repository.User.GetUserProfileAsync(userId, trackChanges);
+            if (userUpdateEntity == null)
+            {
+                _logger.LogError($"User with id {userId} not found.");
+                return Result.Failure(Error.NotFound("UserProfile", userId));
+            }
             userUpdateEntity.FirstName = userUpdateProfileDto.Firstname;
             userUpdateEntity.LastName = userUpdateProfileDto.Lastname;
             userUpdateEntity.UserName = userUpdateProfileDto.Username;
 
             await _repository.SaveAsync();
+            return Result.Success();
         }
     }
 }

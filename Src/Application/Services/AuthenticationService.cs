@@ -39,8 +39,7 @@ namespace Application.Services
                 Email = userForRegistration.Email,
                 Role = UserRole.Customer
             };
-            IdentityResult result = await _userManager.CreateAsync(user, userForRegistration.Password);
-            return result;
+            return await _userManager.CreateAsync(user, userForRegistration.Password);
         }
         public async Task<User> ValidateUser(UserForAuthenticationDto userForAuth)
         {

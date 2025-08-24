@@ -1,7 +1,3 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using Domain.Entities.Models;
 
 namespace Application.DTOs
@@ -21,7 +17,6 @@ namespace Application.DTOs
     {
         public string Email { get; init; } = string.Empty;
         public string Password { get; init; } = string.Empty;
-
     }
 
     public record TokenDto(string AccessToken, string RefreshToken);

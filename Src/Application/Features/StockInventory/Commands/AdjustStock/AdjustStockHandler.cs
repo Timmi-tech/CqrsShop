@@ -1,41 +1,48 @@
-using Application.Interfaces.Contracts;
+    using Application.Interfaces.Contracts;
+using Domain.Common;
 using MediatR;
 
-namespace Application.Features.Commands.AdjustStock
-{
-    public class  IncreaseStockCommandHandler(IRepositoryManager repositoryManager) : IRequestHandler<IncreaseStockCommand, Unit>
+    namespace Application.Features.Commands.AdjustStock
     {
-        private readonly IRepositoryManager _repositoryManager = repositoryManager;
-
-        public async Task<Unit> Handle(IncreaseStockCommand request, CancellationToken cancellationToken)
+        public class  IncreaseStockCommandHandler(IRepositoryManager repositoryManager) : IRequestHandler<IncreaseStockCommand, Result>
         {
+            private readonly IRepositoryManager _repositoryManager = repositoryManager;
+
+            public async Task<Result> Handle(IncreaseStockCommand request, CancellationToken cancellationToken)
+            {
             var inventory = await _repositoryManager.Inventory
-                .GetInventoryByProductIdAsync(request.ProductId, trackChanges: true)
-                ?? throw new KeyNotFoundException($"Inventory not found for ProductId: {request.ProductId}");
+                .GetInventoryByProductIdAsync(request.ProductId, trackChanges: true);
 
-            inventory.AdjustStock(request.Quantity);
+            if (inventory is null)
+            {
+                return Result.Failure(Error.NotFound("Inventory", request.ProductId.ToString()));
+            }
+                inventory.AdjustStock(request.Quantity);
 
-            await _repositoryManager.SaveAsync();
+                await _repositoryManager.SaveAsync();
 
-            return Unit.Value;
+                return Result.Success();
+            }
         }
-    }
-    public class DecreaseStockCommandHandler(IRepositoryManager repositoryManager) : IRequestHandler<DecreaseStockCommand, Unit>
-    {
-        private readonly IRepositoryManager _repositoryManager = repositoryManager;
-
-        public async Task<Unit> Handle(DecreaseStockCommand request, CancellationToken cancellationToken)
+        public class DecreaseStockCommandHandler(IRepositoryManager repositoryManager) : IRequestHandler<DecreaseStockCommand, Result>
         {
+            private readonly IRepositoryManager _repositoryManager = repositoryManager;
+
+            public async Task<Result> Handle(DecreaseStockCommand request, CancellationToken cancellationToken)
+            {
             var inventory = await _repositoryManager.Inventory
-                .GetInventoryByProductIdAsync(request.ProductId, trackChanges: true)
-                ?? throw new KeyNotFoundException($"Inventory not found for ProductId: {request.ProductId}");
+                .GetInventoryByProductIdAsync(request.ProductId, trackChanges: true);
+            if (inventory is null)
+            {
+                return Result.Failure(Error.NotFound("Inventory", request.ProductId.ToString()));
+            }
 
-            inventory.AdjustStock(-request.Quantity);
+                inventory.AdjustStock(-request.Quantity);
 
-            await _repositoryManager.SaveAsync();
+                await _repositoryManager.SaveAsync();
 
-            return Unit.Value;
+                return Result.Success();
+            }
         }
+        
     }
-    
-}

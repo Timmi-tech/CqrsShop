@@ -1,8 +1,10 @@
 using Application.DTOs;
 using Application.Features.Products.Commands.CreateProduct;
+using Application.Features.Products.Commands.UpdateProduct;
 using Application.Features.Products.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Domain.Common;
 
 namespace Presentation.Controllers
 {
@@ -16,8 +18,12 @@ namespace Presentation.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
         {
-            Guid productId = await _mediator.Send(command);
-            return CreatedAtAction(nameof(GetProductById), new { id = productId }, productId);
+            var result = await _mediator.Send(command);
+            return result.Match(
+                onSuccess: id => CreatedAtAction(nameof(GetProductById), new { id }, id),
+                onFailure: error => error.StatusCode.HasValue
+                                    ? StatusCode(error.StatusCode.Value, error)
+                                    : BadRequest(error));
         }
 
         // GET: api/products/{id}
@@ -35,5 +41,22 @@ namespace Presentation.Controllers
             return Ok(products);
         }
 
+        // PUT: api/products/{id}
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] UpdateProductCommand command)
+        {
+            if (id != command.Id)
+                return BadRequest("ID mismatch");
+
+            var result = await _mediator.Send(command);
+
+            if (result.IsSuccess)
+                return NoContent(); // 204 No Content
+
+            if (result.Error?.StatusCode.HasValue == true)
+                return StatusCode(result.Error.StatusCode.Value, result.Error);
+
+            return BadRequest(result.Error);
+        }
     }
 }

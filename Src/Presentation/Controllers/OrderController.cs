@@ -18,10 +18,18 @@ namespace Presentation.Controllers
         [HttpPost]
         public async Task<IActionResult> PlaceOrder([FromBody] PlaceOrderCommand command)
         {
-            Guid orderId = await _mediator.Send(command);
-            return CreatedAtAction(nameof(GetOrderById), new { orderId }, orderId);
-        }
+            var result = await _mediator.Send(command);
 
+            return result.Match(
+                onSuccess: orderId => CreatedAtAction(nameof(GetOrderById), new { orderId }, orderId) as IActionResult,
+                onFailure: error => error.Code switch
+                {
+                    "NotFound" => NotFound(error),
+                    "Validation" => BadRequest(error),
+                    _ => StatusCode(error.StatusCode ?? 500, error)
+                }
+            );
+        }
         // Cancel an order
         [HttpPut("{orderId}/cancel")]
         public async Task<IActionResult> CancelOrder(Guid orderId)

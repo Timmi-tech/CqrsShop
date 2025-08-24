@@ -1,24 +1,27 @@
 using Application.DTOs;
 using Application.Features.Authentication.Commands.LoginUser;
 using Application.Interfaces.Services.Contracts;
+using Domain.Common;
 using MediatR;
 
 namespace Application.Features.Authentication.Handlers
 {
-    public class LoginUserHandler : IRequestHandler<LoginUserCommand, TokenDto>
+    public class LoginUserHandler(IServiceManager serviceManager) : IRequestHandler<LoginUserCommand, Result<TokenDto>>
     {
-        private readonly IServiceManager _serviceManager;
+        private readonly IServiceManager _serviceManager = serviceManager;
 
-
-        public LoginUserHandler(IServiceManager serviceManager)
+        public async Task<Result<TokenDto>> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
-            _serviceManager = serviceManager;
-        }
+            var isValidUser = await _serviceManager.AuthenticationService.ValidateUser(request.UserForAuthentication);
 
-        public async Task<TokenDto> Handle(LoginUserCommand request, CancellationToken cancellationToken)
-        {
-            var isValidUser = await _serviceManager.AuthenticationService.ValidateUser(request.UserForAuthentication) ?? throw new UnauthorizedAccessException("Invalid credentials.");
-            return await _serviceManager.AuthenticationService.CreateToken(isValidUser, populateExp: true);
+            if (isValidUser is null)
+            {
+                return Result<TokenDto>.Failure(
+                    Error.Validation("InvalidCredentials", "Email or password is incorrect"));
+            }
+
+            var token = await _serviceManager.AuthenticationService.CreateToken(isValidUser, populateExp: true);
+            return Result<TokenDto>.Success(token);
         }
     }
 }

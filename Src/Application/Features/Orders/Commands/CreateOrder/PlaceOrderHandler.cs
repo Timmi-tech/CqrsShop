@@ -1,24 +1,27 @@
 using Application.Interfaces.Contracts;
+using Domain.Common;
 using Domain.Entities.Models;
 using MediatR;
 
 namespace Application.Features.Orders.Commands.CreateOrder
 {
-    public class PlaceOrderHandler(IRepositoryManager repositoryManager) : IRequestHandler<PlaceOrderCommand, Guid>
+    public class PlaceOrderHandler(IRepositoryManager repositoryManager) : IRequestHandler<PlaceOrderCommand, Result<Guid>>
     {
         private readonly IRepositoryManager _repositoryManager = repositoryManager;
 
-        public async Task<Guid> Handle(PlaceOrderCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Guid>> Handle(PlaceOrderCommand request, CancellationToken cancellationToken)
         {
-            var Customer = await _repositoryManager.User.GetUserProfileAsync(request.CustomerId, trackChanges: false) ?? throw new KeyNotFoundException("Customer not found.");
-
+            var Customer = await _repositoryManager.User.GetUserProfileAsync(request.CustomerId, trackChanges: false);
+            if (Customer is null)
+                return Result<Guid>.Failure(Error.NotFound("Customer", request.CustomerId));
 
             var productIds = request.Products.Select(p => p.ProductId).ToList();
             var products = await _repositoryManager.Product.GetProductsByIdsAsync(productIds, trackChanges: true);
 
             var foundProductIds = products.Select(p => p.Id).ToHashSet();
             if (!productIds.All(id => foundProductIds.Contains(id)))
-                throw new KeyNotFoundException("One or more products not found.");
+                return Result<Guid>.Failure(Error.NotFound("Product", "One or more products not found."));
+
 
             var order = new Order(request.CustomerId);
 
@@ -26,10 +29,15 @@ namespace Application.Features.Orders.Commands.CreateOrder
             {
                 var product = products.First(p => p.Id == item.ProductId);
 
-                if (product.Inventory == null || !product.Inventory.HasSufficientStock(item.Quantity))
-                    throw new InvalidOperationException($"Insufficient stock for {product.Name}.");
-                // Reduce stock using AdjustStock with negative value
-                product.Inventory.AdjustStock(-item.Quantity);    
+                if (product.Inventory is null)
+                    return Result<Guid>.Failure(Error.Validation("InventoryMissing", $"Product {product.Name} has no inventory."));
+
+                if (!product.Inventory.HasSufficientStock(item.Quantity))
+                    return Result<Guid>.Failure(Error.Validation("InsufficientStock", $"Insufficient stock for {product.Name}."));
+
+                var adjustResult = product.Inventory.AdjustStock(-item.Quantity);    
+                if (!adjustResult.IsSuccess)
+                    return Result<Guid>.Failure(adjustResult.Error!);
 
                 order.AddOrderItem(product.Id, item.Quantity, product.Price);
             }
@@ -37,7 +45,7 @@ namespace Application.Features.Orders.Commands.CreateOrder
 
             await _repositoryManager.SaveAsync();
             
-            return order.Id;
+            return Result<Guid>.Success(order.Id);
         }
     }
 }

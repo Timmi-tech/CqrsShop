@@ -1,16 +1,12 @@
 using Application.DTOs;
+using Domain.Common;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 
 namespace Application.Features.Authentication.Commands.RegisterUser
 {
-    public class RegisterUserCommand : IRequest<IdentityResult>
+    public class RegisterUserCommand(UserForRegistrationDto userForRegistration) : IRequest<Result>
     {
-        public UserForRegistrationDto UserForRegistration { get; init; }
-
-    public RegisterUserCommand(UserForRegistrationDto userForRegistration)
-    {
-        UserForRegistration = userForRegistration;
-    } 
+        public UserForRegistrationDto UserForRegistration { get; init; } = userForRegistration;
     }
 }

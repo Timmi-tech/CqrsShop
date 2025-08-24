@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Application.Features.Authentication.Commands.LoginUser;
+using Domain.Common;
 
 namespace Presentation.Controllers
 {
@@ -18,28 +19,29 @@ namespace Presentation.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return Ok(BadRequest(ModelState));
+                return BadRequest(Result.Failure(
+                    Error.Validation("Invalid Model", "The registration request is invalid.")));
             }
 
             RegisterUserCommand command = new(dto);
-            IdentityResult result = await _mediator.Send(command);
+            Result result = await _mediator.Send(command);
 
-            if (result.Succeeded)
-            {
+            if (result.IsSuccess)
                 return Ok(new { Message = "User registered successfully." });
-            }
 
-            IEnumerable<string> errors = result.Errors.Select(e => e.Description);
-            return BadRequest(new { Errors = errors });
+            return BadRequest(result.Error);
         }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserForAuthenticationDto userDto)
         {
             LoginUserCommand command = new(userDto);
-            var token = await _mediator.Send(command);
+            var result = await _mediator.Send(command);
 
-            return Ok(token); // TokenDto is returned
+            return result.Match<IActionResult>(
+                token => Ok(token),
+                error => Unauthorized(error)
+                );
+
         }
-            
     }
 }

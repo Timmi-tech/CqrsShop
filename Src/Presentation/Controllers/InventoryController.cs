@@ -1,4 +1,5 @@
 using Application.Features.Commands.AdjustStock;
+using Domain.Common;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,8 +17,8 @@ namespace Presentation.Controllers
         [HttpPost("increase")]
         public async Task<IActionResult> IncreaseStock([FromBody] IncreaseStockCommand command)
         {
-            await _mediator.Send(command);
-            return NoContent();
+            Result result = await _mediator.Send(command);
+            return result.IsSuccess ? NoContent() : NotFound(result.Error);
         }
         /// <summary>
         /// Adjust stock (decrease)
@@ -25,8 +26,8 @@ namespace Presentation.Controllers
         [HttpPost("decrease")]
         public async Task<IActionResult> DecreaseStock([FromBody] DecreaseStockCommand command)
         {
-            await _mediator.Send(command);
-            return NoContent();
+            Result result = await _mediator.Send(command);
+            return result.IsSuccess ? NoContent() : NotFound(result.Error);
         }
 
     }

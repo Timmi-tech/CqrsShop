@@ -1,3 +1,5 @@
+using Domain.Common;
+
 namespace Domain.Entities.Models
 {
     public class Order(string customerId) : BaseEntity
@@ -20,13 +22,14 @@ namespace Domain.Entities.Models
         {
             Status = OrderStatus.Completed;
         }
-        public void CancelOrder()
+        public Result CancelOrder()
         {
             if (Status == OrderStatus.Completed)
             {
-                throw new InvalidOperationException("Cannot cancel a completed order.");
+                return Result.Failure(Error.Validation("Invalid Operation", "Cannot cancel a completed order."));
             }
             Status = OrderStatus.Cancelled;
+            return Result.Success();
         }
     }
 }

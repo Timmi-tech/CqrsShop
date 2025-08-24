@@ -1,3 +1,4 @@
+using Domain.Common;
 using MediatR;
 
 namespace Application.Features.Products.Commands.CreateProduct
@@ -9,5 +10,5 @@ namespace Application.Features.Products.Commands.CreateProduct
         string Category,
         string UserId,
         int InitialStock
-    ) : IRequest<Guid>;
+    ) : IRequest<Result<Guid>>;
 }

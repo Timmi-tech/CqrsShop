@@ -15,16 +15,20 @@ namespace Presentation.Controllers
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetUserProfile(string userId)
         {
-            GetUserByIdQuery  query = new(userId);
-            UserPofileDto userProfile = await _mediator.Send(query) ?? throw new UserProfileNotFoundException(userId);
-            return Ok(userProfile);
+            var result = await _mediator.Send(new GetUserByIdQuery(userId));
+            return result.Match(
+                onSuccess: user => Ok(user),
+                onFailure: error => StatusCode(error.StatusCode ?? 404, error)
+            );
         }
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {
-            GetAllUserProfilesQuery query = new();
-            IEnumerable<UserPofileDto> users = await _mediator.Send(query);
-            return Ok(users);
+            var result = await _mediator.Send(new GetAllUserProfilesQuery());
+            return result.Match(
+                onSuccess: users => Ok(users),
+                onFailure: error => StatusCode(error.StatusCode ?? 404, error)
+            );
         }
          // PUT: api/UserProfile/{id}
         [HttpPut("{id}")]
