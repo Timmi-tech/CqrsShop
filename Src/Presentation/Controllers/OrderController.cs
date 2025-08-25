@@ -4,6 +4,7 @@ using Application.Features.Orders.Commands.CompletedOrder;
 using Application.Features.Orders.Commands.CreateOrder;
 using Application.Features.Orders.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
@@ -58,6 +59,15 @@ namespace Presentation.Controllers
         public async Task<IActionResult> GetAllOrders()
         {
             IEnumerable<OrderDto> orders = await _mediator.Send(new GetAllOrdersQuery());
+            return Ok(orders);
+        }
+
+        // Get orders by user ID
+        [HttpGet("user/{userId}")]
+        [Authorize]
+        public async Task<IActionResult> GetOrdersByUser(string userId)
+        {
+            List<OrderDto> orders = await _mediator.Send(new GetOrdersByUserQuery(userId));
             return Ok(orders);
         }
 

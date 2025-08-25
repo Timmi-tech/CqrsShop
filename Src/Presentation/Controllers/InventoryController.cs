@@ -1,4 +1,5 @@
 using Application.Features.Commands.AdjustStock;
+using Application.Features.StockInventory.Queries;
 using Domain.Common;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -34,5 +35,24 @@ namespace Presentation.Controllers
             return result.IsSuccess ? NoContent() : NotFound(result.Error);
         }
 
+        /// <summary>
+        /// Get stock level for a specific product
+        /// </summary>
+        [HttpGet("product/{productId:guid}")]
+        public async Task<IActionResult> GetStockLevel(Guid productId)
+        {
+            int? stockLevel = await _mediator.Send(new GetStockLevelQuery(productId));
+            return stockLevel.HasValue ? Ok(new { ProductId = productId, Quantity = stockLevel.Value }) : NotFound();
+        }
+
+        /// <summary>
+        /// Get all stock levels
+        /// </summary>
+        [HttpGet]
+        public async Task<IActionResult> GetAllStockLevels()
+        {
+            List<StockLevelDto> stockLevels = await _mediator.Send(new GetAllStockLevelsQuery());
+            return Ok(stockLevels);
+        }
     }
 }

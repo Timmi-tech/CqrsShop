@@ -130,3 +130,195 @@ WHERE "Id" = @p21 AND "ConcurrencyStamp" = @p22;
 2025-08-25 08:23:09.317 +01:00 [INF] Executed endpoint 'Presentation.Controllers.AuthenticationController.Login (Presentation)'
 2025-08-25 08:23:09.324 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Authentication/login - 200 null application/json; charset=utf-8 473.4581ms
 2025-08-25 08:31:29.972 +01:00 [INF] Application is shutting down...
+2025-08-25 15:57:14.331 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-25 15:57:14.846 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-25 15:57:14.854 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 15:57:14.857 +01:00 [INF] Hosting environment: Development
+2025-08-25 15:57:14.861 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-25 15:57:20.085 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/ - null null
+2025-08-25 15:57:20.154 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-25 15:57:20.359 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/ - 404 0 null 278.7652ms
+2025-08-25 15:57:20.493 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5180/, Response status code: 404
+2025-08-25 15:57:26.404 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger - null null
+2025-08-25 15:57:26.427 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger - 301 0 null 23.8912ms
+2025-08-25 15:57:26.451 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.html - null null
+2025-08-25 15:57:26.636 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.html - 200 null text/html;charset=utf-8 185.4709ms
+2025-08-25 15:57:26.701 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui.css - null null
+2025-08-25 15:57:26.728 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.css - null null
+2025-08-25 15:57:26.730 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.js - null null
+2025-08-25 15:57:26.730 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-bundle.js - null null
+2025-08-25 15:57:26.732 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-standalone-preset.js - null null
+2025-08-25 15:57:26.768 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.css - 200 202 text/css 40.3678ms
+2025-08-25 15:57:26.770 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui.css - 200 155175 text/css 68.732ms
+2025-08-25 15:57:26.795 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 63.228ms
+2025-08-25 15:57:26.774 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.js - 200 null application/javascript;charset=utf-8 44.0778ms
+2025-08-25 15:57:26.809 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/swagger-ui-bundle.js - 200 1485750 text/javascript 78.5566ms
+2025-08-25 15:57:27.349 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - null null
+2025-08-25 15:57:27.362 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - 200 628 image/png 13.1489ms
+2025-08-25 15:57:28.368 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - null null
+2025-08-25 15:57:28.738 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 370.2252ms
+2025-08-25 16:00:15.592 +01:00 [INF] Application is shutting down...
+2025-08-25 16:00:30.334 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-25 16:00:30.540 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-25 16:00:30.548 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 16:00:30.552 +01:00 [INF] Hosting environment: Development
+2025-08-25 16:00:30.555 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-25 16:00:35.346 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.html - null null
+2025-08-25 16:00:35.366 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-25 16:00:35.497 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.html - 200 null text/html;charset=utf-8 154.2551ms
+2025-08-25 16:00:36.875 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - null null
+2025-08-25 16:00:37.143 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 269.5914ms
+2025-08-25 16:00:47.160 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/UserProfile - null null
+2025-08-25 16:00:47.257 +01:00 [INF] Executing endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-25 16:00:47.290 +01:00 [INF] Route matched with {action = "GetAllUsers", controller = "UserProfile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller Presentation.Controllers.UserProfileController (Presentation).
+2025-08-25 16:00:50.118 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+2025-08-25 16:00:50.294 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.User, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.UserPofileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 16:00:50.315 +01:00 [INF] Executed action Presentation.Controllers.UserProfileController.GetAllUsers (Presentation) in 3012.6338ms
+2025-08-25 16:00:50.322 +01:00 [INF] Executed endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-25 16:00:50.337 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/UserProfile - 200 null application/json; charset=utf-8 3176.651ms
+2025-08-25 16:01:04.905 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/user/808afd35-9e7a-496d-a25d-a0e2a4f34d6c - null null
+2025-08-25 16:01:04.951 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-25 16:01:04.963 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-25 16:01:04.968 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/user/808afd35-9e7a-496d-a25d-a0e2a4f34d6c - 401 0 null 63.0689ms
+2025-08-25 16:01:32.243 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Authentication/login - application/json 54
+2025-08-25 16:01:32.255 +01:00 [INF] Executing endpoint 'Presentation.Controllers.AuthenticationController.Login (Presentation)'
+2025-08-25 16:01:32.278 +01:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.UserForAuthenticationDto) on controller Presentation.Controllers.AuthenticationController (Presentation).
+2025-08-25 16:01:32.681 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-08-25 16:01:32.979 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-08-25 16:01:33.000 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-08-25 16:01:33.044 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.TokenDto'.
+2025-08-25 16:01:33.055 +01:00 [INF] Executed action Presentation.Controllers.AuthenticationController.Login (Presentation) in 674.9936ms
+2025-08-25 16:01:33.062 +01:00 [INF] Executed endpoint 'Presentation.Controllers.AuthenticationController.Login (Presentation)'
+2025-08-25 16:01:33.066 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Authentication/login - 200 null application/json; charset=utf-8 823.4173ms
+2025-08-25 16:01:49.132 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/UserProfile - null null
+2025-08-25 16:01:49.259 +01:00 [INF] Executing endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-25 16:01:49.262 +01:00 [INF] Route matched with {action = "GetAllUsers", controller = "UserProfile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller Presentation.Controllers.UserProfileController (Presentation).
+2025-08-25 16:01:49.312 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+2025-08-25 16:01:49.322 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.User, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.UserPofileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 16:01:49.327 +01:00 [INF] Executed action Presentation.Controllers.UserProfileController.GetAllUsers (Presentation) in 57.2343ms
+2025-08-25 16:01:49.337 +01:00 [INF] Executed endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-25 16:01:49.341 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/UserProfile - 200 null application/json; charset=utf-8 209.1978ms
+2025-08-25 16:01:57.210 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/user/808afd35-9e7a-496d-a25d-a0e2a4f34d6c - null null
+2025-08-25 16:01:57.258 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrdersByUser (Presentation)'
+2025-08-25 16:01:57.288 +01:00 [INF] Route matched with {action = "GetOrdersByUser", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrdersByUser(System.String) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-25 16:01:57.569 +01:00 [INF] Executed DbCommand (29ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."Category", t."CreatedAt0", t."Description", t."Name", t."Price0", t."UpdatedAt0", t."UserId"
+FROM "Order" AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."CustomerId" = @__userId_0
+ORDER BY o."OrderDate" DESC, o."Id", t."Id"
+2025-08-25 16:01:57.581 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.OrderDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 16:01:57.614 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrdersByUser (Presentation) in 317.1005ms
+2025-08-25 16:01:57.620 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrdersByUser (Presentation)'
+2025-08-25 16:01:57.624 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/user/808afd35-9e7a-496d-a25d-a0e2a4f34d6c - 200 null application/json; charset=utf-8 414.5996ms
+2025-08-25 16:02:45.475 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Order/user/77cf1bbb-10db-4b79-972e-1d032a5ada62 - null null
+2025-08-25 16:02:45.513 +01:00 [INF] Executing endpoint 'Presentation.Controllers.OrderController.GetOrdersByUser (Presentation)'
+2025-08-25 16:02:45.518 +01:00 [INF] Route matched with {action = "GetOrdersByUser", controller = "Order"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOrdersByUser(System.String) on controller Presentation.Controllers.OrderController (Presentation).
+2025-08-25 16:02:45.536 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT o."Id", o."CreatedAt", o."CustomerId", o."OrderDate", o."Status", o."TotalAmount", o."UpdatedAt", t."Id", t."CreatedAt", t."OrderId", t."Price", t."ProductId", t."Quantity", t."UpdatedAt", t."Id0", t."Category", t."CreatedAt0", t."Description", t."Name", t."Price0", t."UpdatedAt0", t."UserId"
+FROM "Order" AS o
+LEFT JOIN (
+    SELECT o0."Id", o0."CreatedAt", o0."OrderId", o0."Price", o0."ProductId", o0."Quantity", o0."UpdatedAt", p."Id" AS "Id0", p."Category", p."CreatedAt" AS "CreatedAt0", p."Description", p."Name", p."Price" AS "Price0", p."UpdatedAt" AS "UpdatedAt0", p."UserId"
+    FROM "OrderItem" AS o0
+    INNER JOIN "Product" AS p ON o0."ProductId" = p."Id"
+) AS t ON o."Id" = t."OrderId"
+WHERE o."CustomerId" = @__userId_0
+ORDER BY o."OrderDate" DESC, o."Id", t."Id"
+2025-08-25 16:02:45.562 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.DTOs.OrderDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 16:02:45.575 +01:00 [INF] Executed action Presentation.Controllers.OrderController.GetOrdersByUser (Presentation) in 49.2177ms
+2025-08-25 16:02:45.579 +01:00 [INF] Executed endpoint 'Presentation.Controllers.OrderController.GetOrdersByUser (Presentation)'
+2025-08-25 16:02:45.582 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Order/user/77cf1bbb-10db-4b79-972e-1d032a5ada62 - 200 null application/json; charset=utf-8 106.1083ms
+2025-08-25 16:15:36.503 +01:00 [INF] Application is shutting down...
+2025-08-25 16:22:48.262 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-25 16:22:48.536 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-25 16:22:48.545 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-25 16:22:48.549 +01:00 [INF] Hosting environment: Development
+2025-08-25 16:22:48.552 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
+2025-08-25 16:22:53.434 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.html - null null
+2025-08-25 16:22:53.450 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-25 16:22:53.592 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.html - 200 null text/html;charset=utf-8 160.8745ms
+2025-08-25 16:22:55.069 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - null null
+2025-08-25 16:22:55.383 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 314.6633ms
+2025-08-25 16:24:26.184 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products?PageNumber=1&PageSize=2 - null null
+2025-08-25 16:24:26.310 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-25 16:24:26.319 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-25 16:24:26.326 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products?PageNumber=1&PageSize=2 - 401 0 null 142.2326ms
+2025-08-25 16:24:50.087 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5180/api/Authentication/login - application/json 56
+2025-08-25 16:24:50.111 +01:00 [INF] Executing endpoint 'Presentation.Controllers.AuthenticationController.Login (Presentation)'
+2025-08-25 16:24:50.146 +01:00 [INF] Route matched with {action = "Login", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.UserForAuthenticationDto) on controller Presentation.Controllers.AuthenticationController (Presentation).
+2025-08-25 16:24:52.005 +01:00 [INF] Executed DbCommand (53ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-08-25 16:24:52.253 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2025-08-25 16:24:52.269 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2025-08-25 16:24:52.412 +01:00 [INF] Executed DbCommand (17ms) [Parameters=[@p21='?', @p0='?' (DbType = Int32), @p1='?', @p22='?', @p2='?' (DbType = DateTime), @p3='?', @p4='?' (DbType = Boolean), @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime), @p9='?', @p10='?', @p11='?', @p12='?', @p13='?' (DbType = Boolean), @p14='?', @p15='?' (DbType = DateTime), @p16='?', @p17='?', @p18='?' (DbType = Boolean), @p19='?' (DbType = DateTime), @p20='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "AspNetUsers" SET "AccessFailedCount" = @p0, "ConcurrencyStamp" = @p1, "CreatedAt" = @p2, "Email" = @p3, "EmailConfirmed" = @p4, "FirstName" = @p5, "LastName" = @p6, "LockoutEnabled" = @p7, "LockoutEnd" = @p8, "NormalizedEmail" = @p9, "NormalizedUserName" = @p10, "PasswordHash" = @p11, "PhoneNumber" = @p12, "PhoneNumberConfirmed" = @p13, "RefreshToken" = @p14, "RefreshTokenExpiryTime" = @p15, "Role" = @p16, "SecurityStamp" = @p17, "TwoFactorEnabled" = @p18, "UpdatedAt" = @p19, "UserName" = @p20
+WHERE "Id" = @p21 AND "ConcurrencyStamp" = @p22;
+2025-08-25 16:24:52.458 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.DTOs.TokenDto'.
+2025-08-25 16:24:52.473 +01:00 [INF] Executed action Presentation.Controllers.AuthenticationController.Login (Presentation) in 2317.0169ms
+2025-08-25 16:24:52.478 +01:00 [INF] Executed endpoint 'Presentation.Controllers.AuthenticationController.Login (Presentation)'
+2025-08-25 16:24:52.489 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5180/api/Authentication/login - 200 null application/json; charset=utf-8 2401.6956ms
+2025-08-25 16:25:08.229 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products?PageNumber=1&PageSize=2 - null null
+2025-08-25 16:25:08.333 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-25 16:25:08.347 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts(Application.Common.PaginationParameters) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-25 16:25:08.499 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Product" AS p
+2025-08-25 16:25:08.540 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-25 16:25:08.550 +01:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2025-08-25 16:25:08.688 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."Category", t."CreatedAt", t."Description", t."Name", t."Price", t."UpdatedAt", t."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM (
+    SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+    FROM "Product" AS p
+    LIMIT @__p_1 OFFSET @__p_0
+) AS t
+LEFT JOIN "Inventory" AS i ON t."Id" = i."ProductId"
+2025-08-25 16:25:08.721 +01:00 [INF] Executing OkObjectResult, writing value of type 'Application.Common.PagedResult`1[[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 16:25:08.757 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 404.2841ms
+2025-08-25 16:25:08.761 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-25 16:25:08.766 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products?PageNumber=1&PageSize=2 - 200 null application/json; charset=utf-8 536.9891ms
+2025-08-25 16:25:36.219 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Inventory - null null
+2025-08-25 16:25:36.236 +01:00 [INF] Executing endpoint 'Presentation.Controllers.InventoryController.GetAllStockLevels (Presentation)'
+2025-08-25 16:25:36.246 +01:00 [INF] Route matched with {action = "GetAllStockLevels", controller = "Inventory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllStockLevels() on controller Presentation.Controllers.InventoryController (Presentation).
+2025-08-25 16:25:36.298 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt", p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId"
+FROM "Inventory" AS i
+INNER JOIN "Product" AS p ON i."ProductId" = p."Id"
+2025-08-25 16:25:36.307 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.Features.StockInventory.Queries.StockLevelDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-25 16:25:36.317 +01:00 [INF] Executed action Presentation.Controllers.InventoryController.GetAllStockLevels (Presentation) in 59.9068ms
+2025-08-25 16:25:36.324 +01:00 [INF] Executed endpoint 'Presentation.Controllers.InventoryController.GetAllStockLevels (Presentation)'
+2025-08-25 16:25:36.330 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Inventory - 200 null application/json; charset=utf-8 110.7191ms
+2025-08-25 16:27:55.826 +01:00 [INF] Application is shutting down...
