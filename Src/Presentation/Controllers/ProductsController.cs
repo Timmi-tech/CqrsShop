@@ -5,17 +5,20 @@ using Application.Features.Products.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Domain.Common;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentation.Controllers
 {
     [ApiController]
     [Route("api/Products")]
+    [Authorize]
     public class ProductsController(IMediator mediator) : ControllerBase
     {
         private readonly IMediator _mediator = mediator;
 
         // POST: api/products
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductCommand command)
         {
             var result = await _mediator.Send(command);
@@ -43,6 +46,7 @@ namespace Presentation.Controllers
 
         // PUT: api/products/{id}
         [HttpPut("{id:guid}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateProduct(Guid id, [FromBody] UpdateProductCommand command)
         {
             if (id != command.Id)

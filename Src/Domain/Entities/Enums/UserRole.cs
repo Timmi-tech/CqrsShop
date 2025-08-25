@@ -2,7 +2,7 @@ namespace Domain.Entities.Models
 {
     public enum UserRole
     {
-        Admin = 1,
-        Customer = 2,
+        Customer = 1,
+        Admin = 2,
     }
 }

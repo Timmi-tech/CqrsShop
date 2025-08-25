@@ -110,7 +110,33 @@ namespace Infrastructure.Extensions
         {
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("v1", new OpenApiInfo { Title = "CqrsShop", Version = "v1" });
+                s.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Cqrs-Shop", Version = "v1" });
+                s.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter 'Bearer' [space] and then your valid token in the text input below.\n\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\""
+                });
+                s.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Scheme = "Bearer",
+                            Name = "Authorization",
+                            In = ParameterLocation.Header
+                        },
+                        Array.Empty<string>()
+                    }
+                });
             });
         }
         // This method registers the IRepositoryManager service with the dependency injection container.

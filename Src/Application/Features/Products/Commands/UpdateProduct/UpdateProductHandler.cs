@@ -27,6 +27,5 @@ namespace Application.Features.Products.Commands.UpdateProduct
             await _repository.SaveAsync();
             return Result.Success();
         }
-
     }
 }

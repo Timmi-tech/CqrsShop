@@ -144,3 +144,83 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13
 2025-08-24 21:02:23.861 +01:00 [INF] Hosting environment: Development
 2025-08-24 21:02:23.864 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\CqrsShop\src\presentation
 2025-08-24 21:02:28.030 +01:00 [INF] Application is shutting down...
+2025-08-24 21:10:16.135 +01:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-24 21:10:16.365 +01:00 [INF] Now listening on: http://localhost:5180
+2025-08-24 21:10:16.371 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-24 21:10:16.375 +01:00 [INF] Hosting environment: Development
+2025-08-24 21:10:16.379 +01:00 [INF] Content root path: C:\Users\user\Desktop\c##\cqrsshop\src\presentation
+2025-08-24 21:10:47.056 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/index.html - null null
+2025-08-24 21:10:47.090 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-08-24 21:10:47.373 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/index.html - 200 null text/html;charset=utf-8 319.4764ms
+2025-08-24 21:10:48.503 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - null null
+2025-08-24 21:10:48.547 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - null null
+2025-08-24 21:10:48.615 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/favicon-32x32.png - 200 628 image/png 67.5778ms
+2025-08-24 21:10:48.918 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 416.5786ms
+2025-08-24 21:11:08.665 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products - null null
+2025-08-24 21:11:08.827 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-24 21:11:08.874 +01:00 [INF] Route matched with {action = "GetAllProducts", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllProducts() on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-24 21:11:14.483 +01:00 [INF] Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+2025-08-24 21:11:14.706 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-24 21:11:14.786 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetAllProducts (Presentation) in 5887.3473ms
+2025-08-24 21:11:14.798 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetAllProducts (Presentation)'
+2025-08-24 21:11:14.834 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products - 200 null application/json; charset=utf-8 6168.7184ms
+2025-08-24 21:11:39.280 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - null null
+2025-08-24 21:11:39.335 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-24 21:11:39.395 +01:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(System.Guid) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-24 21:11:39.845 +01:00 [INF] Executed DbCommand (146ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-24 21:11:39.859 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-24 21:11:39.866 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetProductById (Presentation) in 455.1514ms
+2025-08-24 21:11:39.871 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-24 21:11:39.876 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - 200 null application/json; charset=utf-8 596.2657ms
+2025-08-24 21:11:59.144 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - application/json 163
+2025-08-24 21:11:59.198 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.UpdateProduct (Presentation)'
+2025-08-24 21:11:59.220 +01:00 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(System.Guid, Application.Features.Products.Commands.UpdateProduct.UpdateProductCommand) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-24 21:11:59.292 +01:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-08-24 21:11:59.303 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.UpdateProduct (Presentation) in 68.5891ms
+2025-08-24 21:11:59.314 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.UpdateProduct (Presentation)'
+2025-08-24 21:11:59.323 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - 400 null text/plain; charset=utf-8 178.4819ms
+2025-08-24 21:12:14.582 +01:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - application/json 163
+2025-08-24 21:12:14.614 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.UpdateProduct (Presentation)'
+2025-08-24 21:12:14.624 +01:00 [INF] Route matched with {action = "UpdateProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(System.Guid, Application.Features.Products.Commands.UpdateProduct.UpdateProductCommand) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-24 21:12:14.704 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-24 21:12:15.038 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@p3='?' (DbType = Guid), @p0='?', @p1='?', @p2='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Product" SET "Category" = @p0, "Name" = @p1, "Price" = @p2
+WHERE "Id" = @p3;
+2025-08-24 21:12:15.070 +01:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-08-24 21:12:15.077 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.UpdateProduct (Presentation) in 440.9751ms
+2025-08-24 21:12:15.086 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.UpdateProduct (Presentation)'
+2025-08-24 21:12:15.095 +01:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - 204 null null 512.1033ms
+2025-08-24 21:13:10.764 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - null null
+2025-08-24 21:13:10.785 +01:00 [INF] Executing endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-24 21:13:10.795 +01:00 [INF] Route matched with {action = "GetProductById", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductById(System.Guid) on controller Presentation.Controllers.ProductsController (Presentation).
+2025-08-24 21:13:10.819 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__productIds_0='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Category", p."CreatedAt", p."Description", p."Name", p."Price", p."UpdatedAt", p."UserId", i."Id", i."CreatedAt", i."ProductId", i."Quantity", i."UpdatedAt"
+FROM "Product" AS p
+LEFT JOIN "Inventory" AS i ON p."Id" = i."ProductId"
+WHERE p."Id" = ANY (@__productIds_0)
+2025-08-24 21:13:10.838 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.ProductDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-24 21:13:10.849 +01:00 [INF] Executed action Presentation.Controllers.ProductsController.GetProductById (Presentation) in 41.3595ms
+2025-08-24 21:13:10.860 +01:00 [INF] Executed endpoint 'Presentation.Controllers.ProductsController.GetProductById (Presentation)'
+2025-08-24 21:13:10.869 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/Products/b59baafd-62e0-4f63-9011-d0a197dfeaf1 - 200 null application/json; charset=utf-8 105.6016ms
+2025-08-24 21:13:21.697 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5180/api/UserProfile - null null
+2025-08-24 21:13:21.731 +01:00 [INF] Executing endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-24 21:13:21.754 +01:00 [INF] Route matched with {action = "GetAllUsers", controller = "UserProfile"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUsers() on controller Presentation.Controllers.UserProfileController (Presentation).
+2025-08-24 21:13:21.838 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."ConcurrencyStamp", a."CreatedAt", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."RefreshToken", a."RefreshTokenExpiryTime", a."Role", a."SecurityStamp", a."TwoFactorEnabled", a."UpdatedAt", a."UserName"
+FROM "AspNetUsers" AS a
+2025-08-24 21:13:21.862 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+ListSelectIterator`2[[Domain.Entities.Models.User, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Application.DTOs.UserPofileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-24 21:13:21.875 +01:00 [INF] Executed action Presentation.Controllers.UserProfileController.GetAllUsers (Presentation) in 100.7924ms
+2025-08-24 21:13:21.881 +01:00 [INF] Executed endpoint 'Presentation.Controllers.UserProfileController.GetAllUsers (Presentation)'
+2025-08-24 21:13:21.886 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5180/api/UserProfile - 200 null application/json; charset=utf-8 188.1509ms
+2025-08-24 21:13:51.386 +01:00 [INF] Application is shutting down...
