@@ -14,6 +14,11 @@ namespace Infrastructure.Repositories
             return await FindByCondition(x => x.ProductId.Equals(productId), trackChanges)
              .FirstOrDefaultAsync();
         }
+        public async Task<IEnumerable<Inventory>> GetAllInventoriesAsync(bool trackChanges) =>
+            await FindAll(trackChanges)
+                .Include(i => i.Product)
+                .ToListAsync();
+
         public async Task AdjustStockAsync(Guid productId, int quantityChange, bool trackChanges)
         {
             Inventory inventory = await GetInventoryByProductIdAsync(productId, trackChanges)
@@ -23,6 +28,5 @@ namespace Infrastructure.Repositories
 
             Update(inventory);
         }
-
     }
 }

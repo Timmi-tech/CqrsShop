@@ -13,7 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Application.Services
 {
-    internal sealed class AuthenticationService : IAuthenticationService
+    public sealed class AuthenticationService : IAuthenticationService
     {
         private readonly ILoggerManager _logger;
         private readonly UserManager<User> _userManager;

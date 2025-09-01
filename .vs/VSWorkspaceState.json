@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Src",
+    "\\Src\\Application",
+    "\\Src\\Application\\Features",
+    "\\Src\\Application\\Features\\Authentication",
+    "\\Src\\Application\\Features\\Authentication\\Commands",
+    "\\Src\\Application\\Features\\Authentication\\Commands\\LoginUser",
+    "\\Src\\Domain\\Entities",
+    "\\Src\\Domain\\Entities\\Enums",
+    "\\Src\\Infrastructure",
+    "\\Src\\Infrastructure\\Extensions",
+    "\\Src\\Presentation"
+  ],
+  "SelectedNode": "\\Src\\Infrastructure\\Extensions\\ServiceCollectionExtension.cs",
+  "PreviewInSolutionExplorer": false
+}

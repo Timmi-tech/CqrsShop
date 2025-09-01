@@ -17,7 +17,11 @@ using MediatR;
             {
                 return Result.Failure(Error.NotFound("Inventory", request.ProductId.ToString()));
             }
-                inventory.AdjustStock(request.Quantity);
+                var adjustResult = inventory.AdjustStock(request.Quantity);
+                if (!adjustResult.IsSuccess)
+                {
+                    return adjustResult;
+                }
 
                 await _repositoryManager.SaveAsync();
 
@@ -37,7 +41,11 @@ using MediatR;
                 return Result.Failure(Error.NotFound("Inventory", request.ProductId.ToString()));
             }
 
-                inventory.AdjustStock(-request.Quantity);
+                var adjustResult = inventory.AdjustStock(-request.Quantity);
+                if (!adjustResult.IsSuccess)
+                {
+                    return adjustResult;
+                }
 
                 await _repositoryManager.SaveAsync();
 

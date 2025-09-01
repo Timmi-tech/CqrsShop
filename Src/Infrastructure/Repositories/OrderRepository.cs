@@ -22,9 +22,15 @@ namespace Infrastructure.Repositories
             .ThenInclude(p => p.Inventory)
             .FirstOrDefaultAsync();
         }
+        // Get orders by user id
+        public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId, bool trackChanges) => 
+            await FindByCondition(x => x.CustomerId.Equals(userId), trackChanges)
+                .Include(x => x.OrderItems)
+                    .ThenInclude(y => y.Product)
+                .OrderByDescending(x => x.OrderDate)
+                .ToListAsync();
+
         // Create Order
         public void CreateOrder(Order order) => Create(order);
-
-
     }
 }

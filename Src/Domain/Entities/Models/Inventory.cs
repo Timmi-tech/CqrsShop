@@ -11,7 +11,7 @@ namespace Domain.Entities.Models
         public Product? Product { get; private set; } 
 
         // Factory method
-        internal static Result<Inventory> Create(Guid productId, int initialQuantity)
+        public static Result<Inventory> Create(Guid productId, int initialQuantity)
         {
             if (initialQuantity < 0)
                  return Result<Inventory>.Failure(Error.Validation("Negative Stock", "Initial stock cannot be negative."));

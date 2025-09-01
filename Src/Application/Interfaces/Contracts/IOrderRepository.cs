@@ -6,6 +6,7 @@ namespace Application.Interfaces.Contracts
     {
         Task<Order?> GetOrderByIdAsync(Guid id, bool trackChanges);
         Task<IEnumerable<Order>> GetAllOrdersAsync(bool trackChanges);
+        Task<IEnumerable<Order>> GetOrdersByUserIdAsync(string userId, bool trackChanges);
         void CreateOrder(Order order);
     }
 }
